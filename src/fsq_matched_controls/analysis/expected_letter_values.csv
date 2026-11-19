@@ -1,0 +1,137 @@
+table,region,row,metric,item,value,bold,p
+I,France,transductive,acc,control_pca,0.677,0,
+I,France,transductive,acc,control_kmeans,0.696,0,
+I,France,transductive,acc,MP-PCA,+0.021,0,0.083
+I,France,transductive,acc,MP-kmeans,+0.002,0,0.44
+I,France,transductive,acc,MP-recon,+0.078,1,<0.001
+I,France,transductive,acc,R-PCA,-0.056,0,
+I,France,transductive,acc,R-kmeans,-0.075,0,
+I,France,transductive,f1,control_pca,0.604,0,
+I,France,transductive,f1,control_kmeans,0.627,0,
+I,France,transductive,f1,MP-PCA,+0.062,1,0.019
+I,France,transductive,f1,MP-kmeans,+0.039,0,0.080
+I,France,transductive,f1,MP-recon,+0.111,1,<0.001
+I,France,transductive,f1,R-PCA,-0.049,0,
+I,France,transductive,f1,R-kmeans,-0.072,0,
+I,France,strict,acc,control_pca,0.673,0,
+I,France,strict,acc,control_kmeans,0.690,0,
+I,France,strict,acc,MP-PCA,+0.051,1,<0.001
+I,France,strict,acc,MP-kmeans,+0.035,1,0.007
+I,France,strict,acc,MP-recon,+0.111,1,<0.001
+I,France,strict,acc,R-PCA,-0.060,0,
+I,France,strict,acc,R-kmeans,-0.077,0,
+I,France,strict,f1,control_pca,0.599,0,
+I,France,strict,f1,control_kmeans,0.620,0,
+I,France,strict,f1,MP-PCA,+0.121,1,<0.001
+I,France,strict,f1,MP-kmeans,+0.100,1,<0.001
+I,France,strict,f1,MP-recon,+0.175,1,<0.001
+I,France,strict,f1,R-PCA,-0.054,0,
+I,France,strict,f1,R-kmeans,-0.074,0,
+I,Queensland,transductive,acc,control_pca,0.559,0,
+I,Queensland,transductive,acc,control_kmeans,0.566,0,
+I,Queensland,transductive,acc,MP-PCA,+0.118,1,<0.001
+I,Queensland,transductive,acc,MP-kmeans,+0.111,1,<0.001
+I,Queensland,transductive,acc,MP-recon,+0.106,1,<0.001
+I,Queensland,transductive,acc,R-PCA,+0.012,0,
+I,Queensland,transductive,acc,R-kmeans,+0.005,0,
+I,Queensland,transductive,f1,control_pca,0.410,0,
+I,Queensland,transductive,f1,control_kmeans,0.430,0,
+I,Queensland,transductive,f1,MP-PCA,+0.221,1,<0.001
+I,Queensland,transductive,f1,MP-kmeans,+0.202,1,<0.001
+I,Queensland,transductive,f1,MP-recon,+0.206,1,<0.001
+I,Queensland,transductive,f1,R-PCA,+0.015,0,
+I,Queensland,transductive,f1,R-kmeans,-0.005,0,
+I,Queensland,strict,acc,control_pca,0.555,0,
+I,Queensland,strict,acc,control_kmeans,0.566,0,
+I,Queensland,strict,acc,MP-PCA,+0.095,1,<0.001
+I,Queensland,strict,acc,MP-kmeans,+0.083,1,<0.001
+I,Queensland,strict,acc,MP-recon,+0.079,1,<0.001
+I,Queensland,strict,acc,R-PCA,+0.016,1,
+I,Queensland,strict,acc,R-kmeans,+0.004,0,
+I,Queensland,strict,f1,control_pca,0.405,0,
+I,Queensland,strict,f1,control_kmeans,0.430,0,
+I,Queensland,strict,f1,MP-PCA,+0.201,1,<0.001
+I,Queensland,strict,f1,MP-kmeans,+0.176,1,<0.001
+I,Queensland,strict,f1,MP-recon,+0.179,1,<0.001
+I,Queensland,strict,f1,R-PCA,+0.021,1,
+I,Queensland,strict,f1,R-kmeans,-0.004,0,
+I,Estonia,strict,acc,control_pca,0.161,0,
+I,Estonia,strict,acc,control_kmeans,0.169,0,
+I,Estonia,strict,acc,MP-PCA,+0.042,1,<0.001
+I,Estonia,strict,acc,MP-kmeans,+0.035,1,<0.001
+I,Estonia,strict,acc,MP-recon,+0.057,1,<0.001
+I,Estonia,strict,acc,R-PCA,-0.015,0,
+I,Estonia,strict,acc,R-kmeans,-0.022,0,
+I,Estonia,strict,f1,control_pca,0.047,0,
+I,Estonia,strict,f1,control_kmeans,0.051,0,
+I,Estonia,strict,f1,MP-PCA,+0.032,1,<0.001
+I,Estonia,strict,f1,MP-kmeans,+0.028,1,<0.001
+I,Estonia,strict,f1,MP-recon,+0.044,1,<0.001
+I,Estonia,strict,f1,R-PCA,-0.012,0,
+I,Estonia,strict,f1,R-kmeans,-0.016,0,
+II,France,Reconstruction,accuracy,no_quantizer_minus_raw,-0.117,0,
+II,France,Reconstruction,macro-F1,no_quantizer_minus_raw,-0.177,0,
+II,France,Reconstruction,accuracy,tokens_minus_no_quantizer,-0.043,1,
+II,France,Reconstruction,macro-F1,tokens_minus_no_quantizer,-0.059,1,
+II,France,Reconstruction,accuracy,rounding,-0.015,0,
+II,France,Reconstruction,macro-F1,rounding,-0.017,0,
+II,France,"MP, slow teacher",accuracy,no_quantizer_minus_raw,-0.075,0,
+II,France,"MP, slow teacher",macro-F1,no_quantizer_minus_raw,-0.109,0,
+II,France,"MP, slow teacher",accuracy,tokens_minus_no_quantizer,-0.008,0,
+II,France,"MP, slow teacher",macro-F1,tokens_minus_no_quantizer,-0.016,0,
+II,France,"MP, slow teacher",accuracy,rounding,-0.007,0,
+II,France,"MP, slow teacher",macro-F1,rounding,-0.010,0,
+II,France,"MP, band values",accuracy,no_quantizer_minus_raw,-0.088,0,
+II,France,"MP, band values",macro-F1,no_quantizer_minus_raw,-0.149,0,
+II,France,"MP, band values",accuracy,tokens_minus_no_quantizer,+0.005,0,
+II,France,"MP, band values",macro-F1,tokens_minus_no_quantizer,+0.025,0,
+II,France,Rounded PCA,accuracy,no_quantizer_minus_raw,-0.079,0,
+II,France,Rounded PCA,macro-F1,no_quantizer_minus_raw,-0.151,0,
+II,France,Rounded PCA,accuracy,tokens_minus_no_quantizer,-0.026,0,
+II,France,Rounded PCA,macro-F1,tokens_minus_no_quantizer,-0.035,0,
+II,France,Rounded PCA,accuracy,rounding,-0.026,0,
+II,France,Rounded PCA,macro-F1,rounding,-0.035,0,
+II,Queensland,Reconstruction,accuracy,no_quantizer_minus_raw,-0.144,0,
+II,Queensland,Reconstruction,macro-F1,no_quantizer_minus_raw,-0.231,0,
+II,Queensland,Reconstruction,accuracy,tokens_minus_no_quantizer,+0.008,0,
+II,Queensland,Reconstruction,macro-F1,tokens_minus_no_quantizer,+0.019,0,
+II,Queensland,Reconstruction,accuracy,rounding,-0.003,0,
+II,Queensland,Reconstruction,macro-F1,rounding,-0.006,0,
+II,Queensland,"MP, slow teacher",accuracy,no_quantizer_minus_raw,-0.125,0,
+II,Queensland,"MP, slow teacher",macro-F1,no_quantizer_minus_raw,-0.191,0,
+II,Queensland,"MP, slow teacher",accuracy,tokens_minus_no_quantizer,+0.095,1,
+II,Queensland,"MP, slow teacher",macro-F1,tokens_minus_no_quantizer,+0.186,1,
+II,Queensland,"MP, slow teacher",accuracy,rounding,+0.001,0,
+II,Queensland,"MP, slow teacher",macro-F1,rounding,+0.003,0,
+II,Queensland,"MP, band values",accuracy,no_quantizer_minus_raw,-0.097,0,
+II,Queensland,"MP, band values",macro-F1,no_quantizer_minus_raw,-0.160,0,
+II,Queensland,"MP, band values",accuracy,tokens_minus_no_quantizer,+0.066,1,
+II,Queensland,"MP, band values",macro-F1,tokens_minus_no_quantizer,+0.155,1,
+II,Queensland,Rounded PCA,accuracy,no_quantizer_minus_raw,-0.136,0,
+II,Queensland,Rounded PCA,macro-F1,no_quantizer_minus_raw,-0.197,0,
+II,Queensland,Rounded PCA,accuracy,tokens_minus_no_quantizer,-0.013,0,
+II,Queensland,Rounded PCA,macro-F1,tokens_minus_no_quantizer,-0.029,0,
+II,Queensland,Rounded PCA,accuracy,rounding,-0.013,0,
+II,Queensland,Rounded PCA,macro-F1,rounding,-0.029,0,
+II,Estonia,Reconstruction,accuracy,no_quantizer_minus_raw,-0.099,0,
+II,Estonia,Reconstruction,macro-F1,no_quantizer_minus_raw,-0.062,0,
+II,Estonia,Reconstruction,accuracy,tokens_minus_no_quantizer,-0.001,0,
+II,Estonia,Reconstruction,macro-F1,tokens_minus_no_quantizer,0.000,0,
+II,Estonia,Reconstruction,accuracy,rounding,-0.005,0,
+II,Estonia,Reconstruction,macro-F1,rounding,-0.002,0,
+II,Estonia,"MP, slow teacher",accuracy,no_quantizer_minus_raw,-0.024,0,
+II,Estonia,"MP, slow teacher",macro-F1,no_quantizer_minus_raw,-0.009,0,
+II,Estonia,"MP, slow teacher",accuracy,tokens_minus_no_quantizer,-0.019,1,
+II,Estonia,"MP, slow teacher",macro-F1,tokens_minus_no_quantizer,-0.010,1,
+II,Estonia,"MP, slow teacher",accuracy,rounding,-0.006,0,
+II,Estonia,"MP, slow teacher",macro-F1,rounding,-0.005,0,
+II,Estonia,"MP, band values",accuracy,no_quantizer_minus_raw,-0.039,0,
+II,Estonia,"MP, band values",macro-F1,no_quantizer_minus_raw,-0.020,0,
+II,Estonia,"MP, band values",accuracy,tokens_minus_no_quantizer,-0.003,0,
+II,Estonia,"MP, band values",macro-F1,tokens_minus_no_quantizer,+0.001,0,
+II,Estonia,Rounded PCA,accuracy,no_quantizer_minus_raw,-0.068,0,
+II,Estonia,Rounded PCA,macro-F1,no_quantizer_minus_raw,-0.041,0,
+II,Estonia,Rounded PCA,accuracy,tokens_minus_no_quantizer,-0.017,0,
+II,Estonia,Rounded PCA,macro-F1,tokens_minus_no_quantizer,-0.009,0,
+II,Estonia,Rounded PCA,accuracy,rounding,-0.017,0,
+II,Estonia,Rounded PCA,macro-F1,rounding,-0.009,0,
