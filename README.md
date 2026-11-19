@@ -126,7 +126,22 @@ python -m fsq_matched_controls.training.train_twins_eurocropsml --variant ssl|te
                                                                     # twin_bands (ssl) / twin_teacher (teacher), EuroCropsML
 ```
 
-Run the commands from the repository root. The configs set `data_root: "data"` and a local MLflow store (`sqlite:///_mlruns/...`). Each run writes its best checkpoint and `norm_stats.json` to its run directory.
+Run the commands from the repository root. The configs set `data_root: "data"` and a local MLflow store (`sqlite:///_mlruns/...`). Each run writes its best checkpoint and `norm_stats.json` to its run directory. `--max-epochs`, `--limit-train-batches` and `--limit-val-batches` shorten a run without editing its configuration.
+
+## Check training and the checkpoints with the datasets
+
+Both checks need the datasets (see "Data"); point `FSQ_DATA_ROOT` at them. They run on CPU.
+
+```
+python -m fsq_matched_controls.analysis.check_training [--eurocropsml]
+python -m fsq_matched_controls.analysis.check_end_to_end [--eurocropsml] [--run <run_dir>]
+```
+
+`check_training` trains the letter's configuration of each objective (strict Queensland, seed 11; with `--eurocropsml` also the EuroCropsML runs of seed 11) for one epoch of five batches. It checks that optimizer steps were taken and that the checkpoint and `norm_stats.json` were written, to `outputs/check_training/`. Each run takes a few minutes.
+
+`check_end_to_end` starts from a shipped checkpoint (default: masked prediction, strict Queensland, seed 11; with `--eurocropsml` also masked prediction on EuroCropsML, seed 11). It tokenizes the probe pool and the evaluation region with the package's data modules and runs the letter's probe. It then compares accuracy and macro-F1 with the run's row in `results/runs/n_probe_*.csv`, and the token arrays with fingerprints of the letter's own arrays. Each check takes one to two minutes and needs about 5 GB of memory.
+
+**Platform.** Exact equality holds on the platform the letter's probes ran on (Windows, CPU, PyTorch 2.7.0); the check then prints "identical". On other platforms a few FSQ codes can flip at the quantizer's rounding boundaries, and the lbfgs fit can differ slightly with the BLAS library. The check then passes within a tolerance of 0.001 per metric (`PLATFORM_TOLERANCE` in the module) and prints the differences. Observed on Linux (CPU, same pins): for EuroCropsML masked prediction, seed 11, 3 of about 9.9 million token cells differed, accuracy by 8.5e-5 and macro-F1 by 5.8e-4. CropGlobe (strict Queensland, seed 11) gave identical scores, although a few of its token cells differed too.
 
 ## Run-name key
 
