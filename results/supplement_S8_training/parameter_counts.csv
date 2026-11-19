@@ -1,0 +1,5 @@
+objective,benchmark,run_dir,learnable_total,non_learnable_params,buffers_total,encoder,fsq,fsq_buffers,encoder_buffers,context_transformer,ct_input_proj,ct_mask_token,ct_pos_emb,ct_transformer,ct_head,decoder,modules_top
+mp,CropGlobe,cropglobe_predictive_ssl_ov0_625_armN_seed11_vm_holdout_none,541269,0,455,32868,0,4,451,508401,640.0,128.0,12800.0,397440.0,97393.0,0,encoder=32868;fsq=0;context_transformer=508401
+recon,CropGlobe,cropglobe_fsq_ov0_625_reconstruction_matched_transductive_seed42_vm_holdout_none,64846,0,649,32868,0,4,451,0,,,,,,31978,encoder=32868;fsq=0;decoder=31978
+mp,EuroCropsML,eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed11_vm_holdout_Estonia,541269,0,4,32868,0,4,0,508401,640.0,128.0,12800.0,397440.0,97393.0,0,encoder=32868;fsq=0;context_transformer=508401
+recon,EuroCropsML,eurocropml_fsq_baseline_625_reconstruction_varobs_seed42_vm_holdout_Estonia,64846,0,198,32868,0,4,0,0,,,,,,31978,encoder=32868;fsq=0;decoder=31978

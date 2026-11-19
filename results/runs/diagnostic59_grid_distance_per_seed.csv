@@ -1,0 +1,13 @@
+objective,seed,dim,protocol,mean_dist,median_dist,p90_dist,frac_within_0_05
+Reconstruction,seed42,0,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.271163,0.319354,0.47143793,0.19621035817737192
+Reconstruction,seed42,1,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.24871747,0.25898027,0.45678475,0.16390333590303188
+Reconstruction,seed42,2,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2679308,0.3145315,0.4712672,0.20771126722331404
+Reconstruction,seed42,3,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2646584,0.2914812,0.46262747,0.15533043548548603
+Reconstruction,seed101,0,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.25566268,0.2793757,0.46212187,0.18374973307708733
+Reconstruction,seed101,1,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.26360428,0.29687446,0.4672768,0.18595689903738852
+Reconstruction,seed101,2,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.25937438,0.27673113,0.46274984,0.14519520660738264
+Reconstruction,seed101,3,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.25447002,0.2833389,0.46215588,0.19823113051052552
+Reconstruction,seed1904,0,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.26186466,0.30187953,0.46371663,0.1989181931037977
+Reconstruction,seed1904,1,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2550264,0.2900364,0.45962876,0.203092445206909
+Reconstruction,seed1904,2,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.26870233,0.29836953,0.46793073,0.1566430326786031
+Reconstruction,seed1904,3,"matched matched-recipe transductive pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.28036353,0.3296345,0.473189,0.17173307467447468

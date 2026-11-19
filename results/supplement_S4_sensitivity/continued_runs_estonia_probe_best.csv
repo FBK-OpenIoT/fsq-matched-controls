@@ -1,0 +1,5 @@
+which,setting,seed,region,repr_kind,accuracy,macro_f1,epoch,global_step,codes_used,entropy_bits,ckpt
+best,Estonia,4242,Estonia,tokens,0.20808936387925644,0.07810433419274518,188,707427,625,9.062986281909216,C:\data_staging\e8c_ckpts\eurocropml_predictive_ssl_625_heldout_estonia_gradclip_seed4242_vm_e8c_holdout_Estonia\checkpoints\predictive_best.ckpt
+best,Estonia,4242,Estonia,continuous,0.21528054118583367,0.08082143784684591,188,707427,625,9.062986281909216,C:\data_staging\e8c_ckpts\eurocropml_predictive_ssl_625_heldout_estonia_gradclip_seed4242_vm_e8c_holdout_Estonia\checkpoints\predictive_best.ckpt
+best,Estonia,97,Estonia,tokens,0.20305838212722416,0.07806904318073088,191,718656,625,9.0763286617068,C:\data_staging\e8c_ckpts\eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed97_vm_e8c_holdout_Estonia\checkpoints\predictive_best.ckpt
+best,Estonia,97,Estonia,continuous,0.21192655335114546,0.08438790699599497,191,718656,625,9.0763286617068,C:\data_staging\e8c_ckpts\eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed97_vm_e8c_holdout_Estonia\checkpoints\predictive_best.ckpt

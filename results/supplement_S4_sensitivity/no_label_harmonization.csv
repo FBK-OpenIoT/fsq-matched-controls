@@ -1,0 +1,26 @@
+row,column,verdict_no_harm,verdict_letter
+"France, transductive",MP-PCA,S,S
+"France, transductive",MP-kmeans,N,N
+"France, transductive",MP-recon,E,E
+"France, transductive",R-PCA,N,N
+"France, transductive",R-kmeans,N,N
+"Australia, transductive",MP-PCA,E,E
+"Australia, transductive",MP-kmeans,E,E
+"Australia, transductive",MP-recon,E,E
+"Australia, transductive",R-PCA,E,N
+"Australia, transductive",R-kmeans,E,N
+"France, strict",MP-PCA,E,E
+"France, strict",MP-kmeans,E,E
+"France, strict",MP-recon,E,E
+"France, strict",R-PCA,N,N
+"France, strict",R-kmeans,N,N
+"Australia, strict",MP-PCA,E,E
+"Australia, strict",MP-kmeans,E,E
+"Australia, strict",MP-recon,E,E
+"Australia, strict",R-PCA,E,E
+"Australia, strict",R-kmeans,E,N
+Estonia,MP-PCA,E,E
+Estonia,MP-kmeans,E,E
+Estonia,MP-recon,E,E
+Estonia,R-PCA,N,N
+Estonia,R-kmeans,N,N

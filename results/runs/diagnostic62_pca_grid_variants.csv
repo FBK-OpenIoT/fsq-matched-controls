@@ -1,0 +1,36 @@
+setting,representation,probe,test_acc,macro_f1,joint_entropy_bits_eval_region,n_seeds,note
+transductive_FRA,PCA4_cont,logistic,0.703174062376265,0.6394733740625381,,1,new (item A2)
+transductive_FRA,PCA4_eqmass,logistic,0.7072717060009761,0.643142945318088,8.267868028588229,1,new (item A2/A3)
+transductive_FRA,PCA4_round5,logistic,,,6.383369831513785,1,"entropy new (item A3); accuracy: see diagnostic40/44 (unchanged, not recomputed)"
+transductive_FRA,KMEANS625,logistic,,,8.818934303313434,1,"entropy new (item A3), seed 1904 single fit; accuracy: see diagnostic40/44/56 5-seed mean (unchanged)"
+transductive_FRA,MP_tokens_seed1904new,,,,8.489608116866954,1,"entropy new (item A3), from cached continuous features"
+transductive_FRA,MP_tokens_seed2024,,,,8.357314345417915,1,"entropy new (item A3), from cached continuous features"
+transductive_FRA,MP_tokens_seed4242,,,,8.362433891407361,1,"entropy new (item A3), from cached continuous features"
+transductive_AUS,PCA4_cont,logistic,0.5712846614707597,0.4394438561992982,,1,new (item A2)
+transductive_AUS,PCA4_eqmass,logistic,0.5550076878214305,0.4212885938085635,7.911483187190472,1,new (item A2/A3)
+transductive_AUS,PCA4_round5,logistic,,,5.769530934538455,1,"entropy new (item A3); accuracy: see diagnostic40/44 (unchanged, not recomputed)"
+transductive_AUS,KMEANS625,logistic,,,8.423129583604648,1,"entropy new (item A3), seed 1904 single fit; accuracy: see diagnostic40/44/56 5-seed mean (unchanged)"
+transductive_AUS,MP_tokens_seed1904new,,,,8.099066854537508,1,"entropy new (item A3), from cached continuous features"
+transductive_AUS,MP_tokens_seed2024,,,,7.900487683950562,1,"entropy new (item A3), from cached continuous features"
+transductive_AUS,MP_tokens_seed4242,,,,7.986375936635014,1,"entropy new (item A3), from cached continuous features"
+strict_FRA,PCA4_cont,logistic,0.7036436799602206,0.6414342410690184,,1,new (item A2)
+strict_FRA,PCA4_eqmass,logistic,0.7036068472085378,0.6388782116755432,8.02355761071737,1,new (item A2/A3)
+strict_FRA,PCA4_round5,logistic,,,6.380651313154765,1,"entropy new (item A3); accuracy: see diagnostic40/44 (unchanged, not recomputed)"
+strict_FRA,KMEANS625,logistic,,,8.722892246966127,1,"entropy new (item A3), seed 1904 single fit; accuracy: see diagnostic40/44/56 5-seed mean (unchanged)"
+strict_FRA,MP_tokens_seed42,,,,8.372196135322849,1,"entropy new (item A3), from cached continuous features"
+strict_FRA,MP_tokens_seed101,,,,8.320647049785933,1,"entropy new (item A3), from cached continuous features"
+strict_FRA,MP_tokens_seed1904,,,,8.272793078594104,1,"entropy new (item A3), from cached continuous features"
+strict_AUS,PCA4_cont,logistic,0.5713376809289009,0.43955535621636144,,1,new (item A2)
+strict_AUS,PCA4_eqmass,logistic,0.5569163883145114,0.422216101640209,7.843599973344704,1,new (item A2/A3)
+strict_AUS,PCA4_round5,logistic,,,5.779963738900495,1,"entropy new (item A3); accuracy: see diagnostic40/44 (unchanged, not recomputed)"
+strict_AUS,KMEANS625,logistic,,,8.404179677904843,1,"entropy new (item A3), seed 1904 single fit; accuracy: see diagnostic40/44/56 5-seed mean (unchanged)"
+strict_AUS,MP_tokens_seed42,,,,7.994147914861209,1,"entropy new (item A3), from cached continuous features"
+strict_AUS,MP_tokens_seed101,,,,8.097891781877408,1,"entropy new (item A3), from cached continuous features"
+strict_AUS,MP_tokens_seed1904,,,,8.362896429585863,1,"entropy new (item A3), from cached continuous features"
+estonia,PCA4_cont,logistic,0.17815928599852196,0.0566545086798329,,1,"already computed, diagnostic11_eurocropml_nonlearned_baselines.csv (quoted, not new)"
+estonia,PCA4_eqmass,logistic,0.16678983571144335,0.05068427455765377,7.590397427145293,1,new (item A2/A3)
+estonia,PCA4_round5,logistic,0.16113353419362172,0.047359219744976366,6.066356503799868,1,entropy new (item A3); accuracy quoted from diagnostic11 (unchanged)
+estonia,KMEANS625,logistic,0.1805184469330908,0.05847471315732748,8.383092310742708,1,"entropy new (item A3), seed 1904 single fit; accuracy quoted from diagnostic11 single-fit (superseded by diagnostic56 5-seed mean 0.1796, unchanged here)"
+estonia,MP_tokens_seed1904gc,,,,8.078830201305006,1,"entropy new (item A3), from cached continuous features"
+estonia,MP_tokens_seed2024,,,,8.178285385364806,1,"entropy new (item A3), from cached continuous features"
+estonia,MP_tokens_seed4242,,,,8.052536055261085,1,"entropy new (item A3), from cached continuous features"

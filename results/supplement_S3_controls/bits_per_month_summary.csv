@@ -1,0 +1,16 @@
+row,code,bits_all_mean,bits_all_min,bits_all_max,bits_valid_mean,n_fits
+"Australia, strict",k-means K0 (ten-band),8.397,8.3784,8.4095,8.397,5
+"Australia, strict",k-means K2 (letter),8.2906,8.2781,8.3078,8.2906,5
+"Australia, strict",rounded PCA,5.78,5.78,5.78,5.78,1
+"Australia, transductive",k-means K0 (ten-band),8.4373,8.4212,8.4672,8.4373,5
+"Australia, transductive",k-means K2 (letter),8.3372,8.3232,8.3569,8.3372,5
+"Australia, transductive",rounded PCA,5.7695,5.7695,5.7695,5.7695,1
+Estonia,k-means K0 (ten-band),8.3565,8.3454,8.3663,8.9045,5
+Estonia,k-means K2 (letter),8.3418,8.3339,8.3514,8.887,5
+Estonia,rounded PCA,5.9576,5.9576,5.9576,6.3043,1
+"France, strict",k-means K0 (ten-band),8.721,8.7063,8.7295,8.721,5
+"France, strict",k-means K2 (letter),8.5509,8.5305,8.5625,8.5509,5
+"France, strict",rounded PCA,6.3807,6.3807,6.3807,6.3807,1
+"France, transductive",k-means K0 (ten-band),8.8363,8.8189,8.8486,8.8363,5
+"France, transductive",k-means K2 (letter),8.752,8.7276,8.7611,8.752,5
+"France, transductive",rounded PCA,6.3834,6.3834,6.3834,6.3834,1

@@ -1,0 +1,90 @@
+side,set,setting,objective,seed,experiment,cap
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,1904,cropglobe_continuous_ssl_d4_seed1904_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,4242,cropglobe_continuous_ssl_d4_seed4242_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,11,cropglobe_continuous_ssl_d4_seed11_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,23,cropglobe_continuous_ssl_d4_seed23_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,37,cropglobe_continuous_ssl_d4_seed37_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,71,cropglobe_continuous_ssl_d4_seed71_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,89,cropglobe_continuous_ssl_d4_seed89_vm_holdout_none,100
+twin,transductive CropGlobe twin_bands,transductive CropGlobe,twin_bands,97,cropglobe_continuous_ssl_d4_seed97_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,1904,cropglobe_continuous_teacher_d4_seed1904_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,2024,cropglobe_continuous_teacher_d4_seed2024_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,4242,cropglobe_continuous_teacher_d4_seed4242_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,11,cropglobe_continuous_teacher_d4_seed11_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,23,cropglobe_continuous_teacher_d4_seed23_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,37,cropglobe_continuous_teacher_d4_seed37_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,53,cropglobe_continuous_teacher_d4_seed53_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,71,cropglobe_continuous_teacher_d4_seed71_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,89,cropglobe_continuous_teacher_d4_seed89_vm_holdout_none,100
+twin,transductive CropGlobe twin_teacher,transductive CropGlobe,twin_teacher,97,cropglobe_continuous_teacher_d4_seed97_vm_holdout_none,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,2024,cropglobe_continuous_ssl_d4_holdout_FRA_seed2024_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,4242,cropglobe_continuous_ssl_d4_holdout_FRA_seed4242_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,42,cropglobe_continuous_ssl_d4_holdout_FRA_seed42_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,101,cropglobe_continuous_ssl_d4_holdout_FRA_seed101_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,11,cropglobe_continuous_ssl_d4_holdout_FRA_seed11_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,23,cropglobe_continuous_ssl_d4_holdout_FRA_seed23_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,37,cropglobe_continuous_ssl_d4_holdout_FRA_seed37_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,53,cropglobe_continuous_ssl_d4_holdout_FRA_seed53_vm_holdout_FRA,100
+twin,strict FRA twin_bands,strict FRA,twin_bands,71,cropglobe_continuous_ssl_d4_holdout_FRA_seed71_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,1904,cropglobe_continuous_teacher_d4_holdout_FRA_seed1904_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,2024,cropglobe_continuous_teacher_d4_holdout_FRA_seed2024_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,4242,cropglobe_continuous_teacher_d4_holdout_FRA_seed4242_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,42,cropglobe_continuous_teacher_d4_holdout_FRA_seed42_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,101,cropglobe_continuous_teacher_d4_holdout_FRA_seed101_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,11,cropglobe_continuous_teacher_d4_holdout_FRA_seed11_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,23,cropglobe_continuous_teacher_d4_holdout_FRA_seed23_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,37,cropglobe_continuous_teacher_d4_holdout_FRA_seed37_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,53,cropglobe_continuous_teacher_d4_holdout_FRA_seed53_vm_holdout_FRA,100
+twin,strict FRA twin_teacher,strict FRA,twin_teacher,71,cropglobe_continuous_teacher_d4_holdout_FRA_seed71_vm_holdout_FRA,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,1904,cropglobe_continuous_ssl_d4_holdout_AUS_seed1904_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,2024,cropglobe_continuous_ssl_d4_holdout_AUS_seed2024_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,4242,cropglobe_continuous_ssl_d4_holdout_AUS_seed4242_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,42,cropglobe_continuous_ssl_d4_holdout_AUS_seed42_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,101,cropglobe_continuous_ssl_d4_holdout_AUS_seed101_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,11,cropglobe_continuous_ssl_d4_holdout_AUS_seed11_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,23,cropglobe_continuous_ssl_d4_holdout_AUS_seed23_vm_holdout_AUS,100
+twin,strict AUS twin_bands,strict AUS,twin_bands,71,cropglobe_continuous_ssl_d4_holdout_AUS_seed71_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,1904,cropglobe_continuous_teacher_d4_holdout_AUS_seed1904_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,2024,cropglobe_continuous_teacher_d4_holdout_AUS_seed2024_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,4242,cropglobe_continuous_teacher_d4_holdout_AUS_seed4242_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,42,cropglobe_continuous_teacher_d4_holdout_AUS_seed42_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,23,cropglobe_continuous_teacher_d4_holdout_AUS_seed23_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,37,cropglobe_continuous_teacher_d4_holdout_AUS_seed37_vm_holdout_AUS,100
+twin,strict AUS twin_teacher,strict AUS,twin_teacher,53,cropglobe_continuous_teacher_d4_holdout_AUS_seed53_vm_holdout_AUS,100
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,1904,eurocropml_continuous_ssl_d4_seed1904_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,2024,eurocropml_continuous_ssl_d4_seed2024_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,4242,eurocropml_continuous_ssl_d4_seed4242_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,11,eurocropml_continuous_ssl_d4_seed11_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,23,eurocropml_continuous_ssl_d4_seed23_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,53,eurocropml_continuous_ssl_d4_seed53_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_bands,EuroCropsML (Estonia),twin_bands,71,eurocropml_continuous_ssl_d4_seed71_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,1904,eurocropml_continuous_teacher_d4_seed1904_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,2024,eurocropml_continuous_teacher_d4_seed2024_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,4242,eurocropml_continuous_teacher_d4_seed4242_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,11,eurocropml_continuous_teacher_d4_seed11_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,23,eurocropml_continuous_teacher_d4_seed23_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,37,eurocropml_continuous_teacher_d4_seed37_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,53,eurocropml_continuous_teacher_d4_seed53_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,71,eurocropml_continuous_teacher_d4_seed71_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,89,eurocropml_continuous_teacher_d4_seed89_vm_holdout_Estonia,200
+twin,EuroCropsML (Estonia) twin_teacher,EuroCropsML (Estonia),twin_teacher,97,eurocropml_continuous_teacher_d4_seed97_vm_holdout_Estonia,200
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,1904,cropglobe_predictive_ssl_ov0_625_seed1904_NEW_vm_holdout_none,100
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,2024,cropglobe_predictive_ssl_ov0_625_seed2024_vm_holdout_none,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,2024,cropglobe_predictive_ssl_ov0_625_holdout_FRA_seed2024_vm_holdout_FRA,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,4242,cropglobe_predictive_ssl_ov0_625_holdout_FRA_seed4242_vm_holdout_FRA,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,42,cropglobe_predictive_ssl_ov0_625_holdout_FRA_seed42_vm_holdout_FRA,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,101,cropglobe_predictive_ssl_ov0_625_holdout_FRA_seed101_vm_holdout_FRA,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,4242,cropglobe_predictive_ssl_ov0_625_holdout_AUS_seed4242_vm_holdout_AUS,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,42,cropglobe_predictive_ssl_ov0_625_holdout_AUS_seed42_vm_holdout_AUS,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,101,cropglobe_predictive_ssl_ov0_625_holdout_AUS_seed101_vm_holdout_AUS,100
+fsq,"EuroCropsML (Estonia) masked prediction (twins twin_bands, twin_teacher)",EuroCropsML (Estonia),FSQ-mp,4242,eurocropml_predictive_ssl_625_heldout_estonia_gradclip_seed4242_vm_holdout_Estonia,200
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,11,cropglobe_predictive_ssl_ov0_625_armN_seed11_vm_holdout_none,100
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,23,cropglobe_predictive_ssl_ov0_625_armN_seed23_vm_holdout_none,100
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,37,cropglobe_predictive_ssl_ov0_625_armN_seed37_vm_holdout_none,100
+fsq,"transductive CropGlobe masked prediction (twins twin_bands, twin_teacher)",transductive CropGlobe,FSQ-mp,97,cropglobe_predictive_ssl_ov0_625_armN_seed97_vm_holdout_none,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,37,cropglobe_predictive_ssl_ov0_625_holdout_FRA_armN_seed37_vm_holdout_FRA,100
+fsq,"strict FRA masked prediction (twins twin_bands, twin_teacher)",strict FRA,FSQ-mp,71,cropglobe_predictive_ssl_ov0_625_holdout_FRA_armN_seed71_vm_holdout_FRA,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,11,cropglobe_predictive_ssl_ov0_625_holdout_AUS_armN_seed11_vm_holdout_AUS,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,23,cropglobe_predictive_ssl_ov0_625_holdout_AUS_armN_seed23_vm_holdout_AUS,100
+fsq,"strict AUS masked prediction (twins twin_bands, twin_teacher)",strict AUS,FSQ-mp,37,cropglobe_predictive_ssl_ov0_625_holdout_AUS_armN_seed37_vm_holdout_AUS,100
+fsq,"EuroCropsML (Estonia) masked prediction (twins twin_bands, twin_teacher)",EuroCropsML (Estonia),FSQ-mp,97,eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed97_vm_holdout_Estonia,200

@@ -1,0 +1,3 @@
+objective,setting,tag,region,repr_kind,accuracy,macro_f1,train_acc,epoch,global_step,implied_batch,expected_batch,best_val_loss,stop_reason,wall_clock_hours,codes_used,entropy_bits,frac_pixels_constant_token,run_dir
+mp,eurocropml_estonia,97,Estonia,tokens,0.20311522937865953,0.07830611759802582,0.5870634304369244,191,718656,64.0,64,3.2617738246917725,max_epochs reached,9.9125,625,9.0763286617068,,eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed97_vm_holdout_Estonia
+mp,eurocropml_estonia,97,Estonia,continuous,0.2116423170939685,0.08409822404331402,0.5988402675149663,191,718656,64.0,64,3.2617738246917725,max_epochs reached,9.9125,625,9.0763286617068,,eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed97_vm_holdout_Estonia

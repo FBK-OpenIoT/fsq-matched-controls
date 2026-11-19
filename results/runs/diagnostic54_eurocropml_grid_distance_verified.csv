@@ -1,0 +1,25 @@
+objective,seed,dim,protocol,mean_dist,median_dist,p90_dist,frac_within_0_05
+Reconstruction,seed42,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.27231327,0.31797904,0.4768872,0.20136818931999656
+Reconstruction,seed42,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.24835777,0.2595362,0.46175683,0.14424201773599363
+Reconstruction,seed42,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.25574222,0.2674205,0.4630562,0.15234279692111016
+Reconstruction,seed42,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.27531466,0.31625724,0.47871795,0.14997481262541504
+Reconstruction,seed101,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.23075086,0.22946632,0.4458205,0.1853104262742817
+Reconstruction,seed101,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2604211,0.29187357,0.47070345,0.16311213901575347
+Reconstruction,seed101,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.26096565,0.26764718,0.46505892,0.14599678455100143
+Reconstruction,seed101,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.25135005,0.27245763,0.46051243,0.1620898006440175
+Reconstruction,seed1904,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2494688,0.2604346,0.45853028,0.15042289741084922
+Reconstruction,seed1904,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.28436074,0.33821905,0.481344,0.15318283992982787
+Reconstruction,seed1904,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.23862939,0.25161302,0.46374217,0.24042995729742717
+Reconstruction,seed1904,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.2406064,0.24302423,0.45178783,0.14680574921538778
+Predictive,seed1904_gradclip,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22356747,0.20952675,0.44089174,0.1383009515539636
+Predictive,seed1904_gradclip,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22151795,0.21405542,0.44232488,0.19252709614155397
+Predictive,seed1904_gradclip,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21313348,0.19928068,0.4382641,0.21287645384030926
+Predictive,seed1904_gradclip,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21535502,0.19477129,0.43738496,0.16536601476360513
+Predictive,seed2024,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21206725,0.19731832,0.44068202,0.20211778043103346
+Predictive,seed2024,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22507702,0.21385944,0.4420446,0.13123457099360714
+Predictive,seed2024,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22991596,0.21624169,0.44253653,0.1252628903231313
+Predictive,seed2024,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21814716,0.2067033,0.4401909,0.1971535947439562
+Predictive,seed4242,0,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21582334,0.20263278,0.4390468,0.20180328614063553
+Predictive,seed4242,1,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22344014,0.2101534,0.44130772,0.1454689165532539
+Predictive,seed4242,2,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.21342388,0.19926429,0.4383789,0.20826062392327452
+Predictive,seed4242,3,"harmonized pool, real FSQ grid n_levels=5, units=level-spacing (uniform spread expected mean 0.25)",0.22037412,0.20615566,0.43984395,0.14099641810485183

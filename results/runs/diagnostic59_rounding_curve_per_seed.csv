@@ -1,0 +1,25 @@
+objective,seed,n_levels,region,protocol,test_acc,macro_f1
+Reconstruction,seed42,3,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.5794620576616728,0.518883587570236
+Reconstruction,seed42,3,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.561370022798367,0.411149434757506
+Reconstruction,seed42,5,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6283575355205849,0.5731863847024002
+Reconstruction,seed42,5,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5637558984147182,0.4176047355136124
+Reconstruction,seed42,9,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6358990414276374,0.5799138238025293
+Reconstruction,seed42,9,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5644981708286941,0.42005203086346127
+Reconstruction,seed42,17,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6375749316292046,0.5820728535667208
+Reconstruction,seed42,17,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.565982715656646,0.4226514833470523
+Reconstruction,seed101,3,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.5631175241024319,0.49251727781868704
+Reconstruction,seed101,3,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5503419755050103,0.3964438028745187
+Reconstruction,seed101,5,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6088085525649407,0.5432820637829254
+Reconstruction,seed101,5,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5793966385663538,0.43512219264280433
+Reconstruction,seed101,9,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6226024180701479,0.5605927965704696
+Reconstruction,seed101,9,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5700121944753724,0.42061009427164864
+Reconstruction,seed101,17,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6243980147146843,0.562174262877989
+Reconstruction,seed101,17,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5754201792057685,0.42867795503837947
+Reconstruction,seed1904,3,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6117827972633265,0.5322126369371947
+Reconstruction,seed1904,3,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5425481151582631,0.3978629594654009
+Reconstruction,seed1904,5,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.625751618339027,0.5515370251808227
+Reconstruction,seed1904,5,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5297704257462489,0.3769983208434364
+Reconstruction,seed1904,9,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6309450363263014,0.5566090026950643
+Reconstruction,seed1904,9,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.542495095700122,0.3975105333696954
+Reconstruction,seed1904,17,FRA,"harmonized, logistic, matched matched-recipe transductive pool",0.6321973498835164,0.5572996269152914
+Reconstruction,seed1904,17,AUS,"harmonized, logistic, matched matched-recipe transductive pool",0.5416467843698637,0.39723895638523005

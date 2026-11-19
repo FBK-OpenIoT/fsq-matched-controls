@@ -1,0 +1,38 @@
+label,decided_utc,decision,reason,completed_epochs,cap_e8,best_epoch,gap
+EC_s1904,2026-10-27T08:54:43Z,yes,"cap 400 reached, best epoch 397 in the last 10; prepared, queued at the front as EC_s1904_cont2 (cap 800)",400,400,397,2
+EC_s11,2026-10-27T08:54:43Z,yes,"cap 400 reached, best epoch 396 in the last 10; prepared, queued at the front as EC_s11_cont2 (cap 800)",400,400,396,3
+EC_s23,2026-10-27T08:54:43Z,yes,"cap 400 reached, best epoch 399 in the last 10; prepared, queued at the front as EC_s23_cont2 (cap 800)",400,400,399,0
+EC_s37,2026-10-27T08:54:43Z,no,early stop at 372 completed epochs < cap 400,372,400,346,53
+EC_s53,2026-10-27T08:54:43Z,no,reached the cap but best epoch 385 is not in the last 10 epochs (>= 390),400,400,385,14
+EC_s89,2026-10-27T08:54:43Z,no,early stop at 396 completed epochs < cap 400,396,400,370,29
+EC_s97,2026-10-27T08:54:43Z,yes,"cap 400 reached, best epoch 398 in the last 10; prepared, queued at the front as EC_s97_cont2 (cap 800)",400,400,398,1
+EC_s4242,2026-10-27T09:04:56Z,no,reached the cap but best epoch 377 is not in the last 10 epochs (>= 390),400,400,377,22
+TR_s2024,2026-10-28T01:29:56Z,no,early stop at 193 completed epochs < cap 200,193,200,177,22
+TR_s89,2026-10-28T01:29:56Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as TR_s89_cont2 (cap 400)",200,200,198,1
+TR_s23,2026-10-28T01:44:56Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as TR_s23_cont2 (cap 400)",200,200,198,1
+TR_s53,2026-10-28T01:54:56Z,no,reached the cap but best epoch 188 is not in the last 10 epochs (>= 190),200,200,188,11
+TR_s97,2026-10-28T02:24:56Z,yes,"cap 200 reached, best epoch 197 in the last 10; prepared, queued at the front as TR_s97_cont2 (cap 400)",200,200,197,2
+EC_s71,2026-10-28T06:34:57Z,no,early stop at 381 completed epochs < cap 400,381,400,355,44
+EC_s2024,2026-10-28T10:24:57Z,yes,"cap 400 reached, best epoch 399 in the last 10; prepared, queued at the front as EC_s2024_cont2 (cap 800)",400,400,399,0
+TR_s4242,2026-10-28T17:04:57Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as TR_s4242_cont2 (cap 400)",200,200,198,1
+TR_s11,2026-10-28T19:44:57Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as TR_s11_cont2 (cap 400)",200,200,198,1
+TR_s37,2026-10-28T22:59:57Z,yes,"cap 200 reached, best epoch 199 in the last 10; prepared, queued at the front as TR_s37_cont2 (cap 400)",200,200,199,0
+TR_s71,2026-10-29T03:59:57Z,yes,"cap 200 reached, best epoch 199 in the last 10; prepared, queued at the front as TR_s71_cont2 (cap 400)",200,200,199,0
+AUS_s2024,2026-10-29T04:59:57Z,no,early stop at 185 completed epochs < cap 200,185,200,169,30
+TR_s1904,2026-10-29T05:04:57Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as TR_s1904_cont2 (cap 400)",200,200,198,1
+AUS_s23,2026-10-29T07:04:58Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as AUS_s23_cont2 (cap 400)",200,200,198,1
+AUS_s37,2026-10-29T10:54:58Z,yes,"cap 200 reached, best epoch 194 in the last 10; prepared, queued at the front as AUS_s37_cont2 (cap 400)",200,200,194,5
+AUS_s42,2026-10-29T18:04:58Z,no,reached the cap but best epoch 187 is not in the last 10 epochs (>= 190),200,200,187,12
+AUS_s53,2026-10-29T20:34:58Z,no,reached the cap but best epoch 188 is not in the last 10 epochs (>= 190),200,200,188,11
+AUS_s1904,2026-10-30T02:39:58Z,no,reached the cap but best epoch 188 is not in the last 10 epochs (>= 190),200,200,188,11
+FRA_s2024,2026-10-30T08:24:58Z,yes,"cap 200 reached, best epoch 196 in the last 10; prepared, queued at the front as FRA_s2024_cont2 (cap 400)",200,200,196,3
+AUS_s4242,2026-10-30T10:39:58Z,yes,"cap 200 reached, best epoch 198 in the last 10; prepared, queued at the front as AUS_s4242_cont2 (cap 400)",200,200,198,1
+FRA_s53,2026-10-30T12:39:58Z,yes,"cap 200 reached, best epoch 197 in the last 10; prepared, queued at the front as FRA_s53_cont2 (cap 400)",200,200,197,2
+FRA_s71,2026-10-30T13:49:59Z,yes,"cap 200 reached, best epoch 196 in the last 10; prepared, queued at the front as FRA_s71_cont2 (cap 400)",200,200,196,3
+FRA_s1904,2026-10-30T14:59:59Z,yes,"cap 200 reached, best epoch 190 in the last 10; prepared, queued at the front as FRA_s1904_cont2 (cap 400)",200,200,190,9
+FRA_s37,2026-10-30T15:49:59Z,no,reached the cap but best epoch 187 is not in the last 10 epochs (>= 190),200,200,187,12
+FRA_s42,2026-10-30T18:59:59Z,yes,"cap 200 reached, best epoch 196 in the last 10; prepared, queued at the front as FRA_s42_cont2 (cap 400)",200,200,196,3
+FRA_s23,2026-10-31T03:14:59Z,yes,"cap 200 reached, best epoch 197 in the last 10; prepared, queued at the front as FRA_s23_cont2 (cap 400)",200,200,197,2
+FRA_s101,2026-10-31T05:49:59Z,yes,"cap 200 reached, best epoch 199 in the last 10; prepared, queued at the front as FRA_s101_cont2 (cap 400)",200,200,199,0
+FRA_s4242,2026-10-31T09:04:59Z,yes,"cap 200 reached, best epoch 199 in the last 10; prepared, queued at the front as FRA_s4242_cont2 (cap 400)",200,200,199,0
+FRA_s11,2026-10-31T09:24:59Z,yes,"cap 200 reached, best epoch 194 in the last 10; prepared, queued at the front as FRA_s11_cont2 (cap 400)",200,200,194,5
