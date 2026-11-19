@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the letter it accompanies (see preferred-citation)."
+type: software
+title: "fsq-matched-controls"
+authors:
+  - given-names: "João"
+    family-names: "Calisto"
+    affiliation: "Fondazione Bruno Kessler"
+    orcid: "https://orcid.org/0009-0001-5594-6966"
+  - given-names: "Massimo"
+    family-names: "Vecchio"
+    affiliation: "Fondazione Bruno Kessler"
+    orcid: "https://orcid.org/0000-0003-4426-8220"
+  - given-names: "Miguel"
+    family-names: "Pincheira"
+    affiliation: "Fondazione Bruno Kessler"
+    orcid: "https://orcid.org/0000-0002-5847-2145"
+  - given-names: "Fabio"
+    family-names: "Antonelli"
+    affiliation: "Fondazione Bruno Kessler"
+    orcid: "https://orcid.org/0000-0001-5221-7752"
+repository-code: "https://github.com/FBK-OpenIoT/fsq-matched-controls"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series"
+  authors:
+    - given-names: "João"
+      family-names: "Calisto"
+      affiliation: "Fondazione Bruno Kessler"
+      orcid: "https://orcid.org/0009-0001-5594-6966"
+    - given-names: "Massimo"
+      family-names: "Vecchio"
+      affiliation: "Fondazione Bruno Kessler"
+      orcid: "https://orcid.org/0000-0003-4426-8220"
+    - given-names: "Miguel"
+      family-names: "Pincheira"
+      affiliation: "Fondazione Bruno Kessler"
+      orcid: "https://orcid.org/0000-0002-5847-2145"
+    - given-names: "Fabio"
+      family-names: "Antonelli"
+      affiliation: "Fondazione Bruno Kessler"
+      orcid: "https://orcid.org/0000-0001-5221-7752"
+  journal: "IEEE Geoscience and Remote Sensing Letters"
+  year: 2026
+  # On acceptance: update status, and add volume, start/end (pages) and doi.
+  status: submitted
