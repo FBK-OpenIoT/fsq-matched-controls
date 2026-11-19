@@ -1,0 +1,41 @@
+experiment_name: cropglobe_fsq_ov0_625_reconstruction_matched_holdout_AUS_armN_seed23_vm
+
+source: Median
+data_root: "data"
+
+hold_out_countries: ["AUS"]
+train_countries: null
+
+days_per_token: 30
+overlap_days: 0
+
+dn_scale: 10000.0
+
+n_bands: 10
+encoder_channels: [32, 64, 128]
+kernel_size: 3
+dropout: 0.1
+
+n_dims: 4
+n_levels: 5
+
+batch_size: 448
+max_epochs: 100
+lr: 0.001
+lr_scheduler: plateau
+weight_decay: 0.0001
+plateau_factor: 0.5
+plateau_patience: 10
+early_stop_patience: 15
+val_fraction: 0.1
+num_workers: 2
+random_seed: 23
+
+experiment_root: "_experiments"
+
+mlflow_tracking_uri: "sqlite:///_mlruns/mlflow.db"
+mlflow_experiment_name: "croplang-fsq-cropglobe-reconstruction-matched-armN"
+
+log_wandb: false
+wandb_project: "croplang-fsq"
+wandb_entity: null

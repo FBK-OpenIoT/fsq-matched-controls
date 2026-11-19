@@ -1,0 +1,57 @@
+experiment_name: eurocropml_continuous_teacher_d4_seed89_vm
+
+dataset: eurocropml
+data_root: "data"
+
+split_name: latvia_portugal_vs_estonia
+finetune_variant: all
+
+hold_out_countries: ["Estonia"]
+
+w_max: 10
+w_min: 2
+
+dn_scale: 10000.0
+
+n_bands: 10
+encoder_channels: [32, 64, 128]
+kernel_size: 3
+dropout: 0.1
+norm_type: layer
+
+n_dims: 4
+n_levels: 5
+
+mask_ratio: 0.15
+min_masks: 1
+
+d_model: 128
+n_heads: 4
+n_layers: 3
+dim_feedforward: 256
+transformer_dropout: 0.1
+max_seq_len: 100
+
+parcel_batch_size: 64
+max_epochs: 200
+lr: 0.0005
+gradient_clip_val: 1.0
+lr_scheduler: plateau
+plateau_factor: 0.5
+plateau_patience: 10
+early_stop_patience: 25
+weight_decay: 0.0001
+val_fraction: 0.1
+num_workers: 2
+random_seed: 89
+
+experiment_root: "_experiments"
+
+mlflow_tracking_uri: "sqlite:///_mlruns/mlflow_twins.db"
+mlflow_experiment_name: "croplang-fsq-eurocropml-continuous-teacher-twin-teacher"
+
+log_wandb: false
+wandb_project: "croplang-fsq"
+wandb_entity: null
+
+tokenizer_ckpt: null
