@@ -21,10 +21,13 @@ dependencies = [
     "matplotlib==3.10.1",
     "PyYAML==6.0.2",
     "mlflow==3.14.0",
+    "requests==2.34.2",
 ]
 
 [project.optional-dependencies]
 analysis-extras = ["seaborn", "umap-learn"]
+# the Prefect flows for the dataset downloads (python -m fsq_matched_controls.data.download.flows)
+download = ["prefect==3.9.3"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

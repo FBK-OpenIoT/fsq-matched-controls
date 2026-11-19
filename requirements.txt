@@ -9,6 +9,9 @@ scikit-learn==1.9.0
 matplotlib==3.10.1
 PyYAML==6.0.2
 mlflow==3.14.0
+requests==2.34.2
+# optional, for the Prefect download flows (pip install -e ".[download]"):
+# prefect==3.9.3
 # Training ran on a GPU node with: PyTorch 2.14.0 (CUDA 13.0), Lightning 2.6.6, Ubuntu 24.04, NVIDIA L40S
 # (one EuroCropsML run on an NVIDIA A100). The gradient-boosting probe (supplement S4.3) also ran with scikit-learn 1.9.1;
 # its fits agree with 1.9.0 to four decimals.

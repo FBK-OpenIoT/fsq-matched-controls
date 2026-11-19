@@ -105,12 +105,29 @@ Every location is defined in `src/fsq_matched_controls/paths.py`. Each can be ov
 
 ## Data
 
-The repository contains no satellite data and no per-pixel or per-parcel arrays. Download the public benchmarks:
+The repository contains no satellite data and no per-pixel or per-parcel arrays. The two public benchmarks are downloaded into `FSQ_DATA_ROOT` (default `data/`), in the layout the data modules read:
 
-- **CropGlobe** (Tong and Wang, 2025). Sentinel-2 median composites per country split, `median_S2_{CC}_month5-11_day5.npz`, in `data/cropglobe/raw/Median/`.
-- **EuroCropsML** (Reuss et al., 2025). The preprocessed parcel files in `data/eurocropml/preprocess/`, and the benchmark's split files in `data/eurocropml/split/latvia_portugal_vs_estonia/`:
-  - `pretrain/region_split.json`;
-  - `finetune/region_split_{k}.json`, the official few-shot splits used in supplement S4.2.
+```
+pip install -e ".[download]"                                   # adds Prefect
+python -m fsq_matched_controls.data.download.flows all         # Prefect flow: both datasets (or: cropglobe, eurocropsml)
+```
+
+The same downloads without Prefect:
+
+```
+python -m fsq_matched_controls.data.download all               # or: cropglobe [--countries FRA AUS ...], eurocropsml
+python -m fsq_matched_controls.data.download all --dry-run     # list files, sizes, checksums and destinations; write nothing
+```
+
+- **CropGlobe** (Tong and Wang, 2025), from the Hugging Face dataset `x-ytong/CropGlobe`: the Sentinel-2 median composites of the ten country splits, `Median/median_S2_{CC}_month5-11_day5.npz` (391 MB). They go to `data/cropglobe/raw/Median/`.
+- **EuroCropsML** (Reuss et al., 2025), from Zenodo record 13789558: `preprocess.zip` (1.45 GB, one file per parcel) and `split.zip` (10 MB, the benchmark's split files). They are extracted into `data/eurocropml/`, which gives:
+  - `preprocess/`;
+  - `split/latvia_portugal_vs_estonia/pretrain/region_split.json`;
+  - `split/latvia_portugal_vs_estonia/finetune/region_split_{k}.json`, the official few-shot splits used in supplement S4.2.
+
+  The record's `raw_data.zip` is not needed.
+
+Every file is checked against the checksum its source publishes (SHA-256 for CropGlobe, MD5 for EuroCropsML), and a rerun skips files already present and verified. No conversion step is needed. On first use, the EuroCropsML data module gathers the parcel files it needs into `data/eurocropml/cache/`, a one-time read.
 
 The arrays the controls and probes read are rebuilt from these files: the package's data modules build the month windows, and the probe and control code (see "Contents of this version") rebuilds the arrays. The monthly band means are the masked mean of each month's observations.
 
