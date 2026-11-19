@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+# generated or local data, at the repository root only (results/runs/ is part of the repository)
+/outputs/
+/runs/
+/data/
+/features/
+/_mlruns/
+/mlruns/
+# local editor and environment folders
+/.idea/
+/.venv/
+# the letter itself is not part of the repository (only the supplements and Figure 1 are)
+/manuscript/SubmittedTwoColumn.tex
+/manuscript/SubmittedTwoColumn.pdf
+/manuscript/Submitted*

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=71", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsq-matched-controls"
+version = "1.0.0"
+description = "Learned discrete tokenizers against matched non-learned controls for satellite image time series (code of the GRSL letter)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+# Pinned to the versions the letter's probes, controls, tests and figure were run with (Python 3.12.10).
+# Training ran on a GPU node with PyTorch 2.14.0 (CUDA 13.0) and Lightning 2.6.6; see the README.
+dependencies = [
+    "torch==2.7.0",
+    "lightning==2.6.5",
+    "numpy==2.1.1",
+    "pandas==2.2.3",
+    "scipy==1.15.2",
+    "scikit-learn==1.9.0",
+    "matplotlib==3.10.1",
+    "PyYAML==6.0.2",
+    "mlflow==3.14.0",
+]
+
+[project.optional-dependencies]
+analysis-extras = ["seaborn", "umap-learn"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"fsq_matched_controls.analysis" = ["expected_letter_values.csv"]

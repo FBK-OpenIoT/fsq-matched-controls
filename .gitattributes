@@ -1,0 +1,6 @@
+# Result tables, checkpoints and the manuscript PDFs are stored byte for byte (no line-ending conversion),
+# so the smoke test's byte-identity checks hold on every platform.
+results/** -text
+checkpoints/*.pt binary
+manuscript/*.pdf binary
+manuscript/*.png binary
