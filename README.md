@@ -1,6 +1,8 @@
 # Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series
 
-Code, run configurations, tokenizer checkpoints and per-run results of the IEEE Geoscience and Remote Sensing Letters letter of the same title.
+Code, run configurations, tokenizer checkpoints and per-run results of the letter of the same title, submitted to IEEE Geoscience and Remote Sensing Letters.
+
+The letter's supplementary material is `manuscript/SupplementaryMaterial.pdf`. `manuscript/ExtendedSupplement.md` reports every check in full, including those the three-page supplement summarizes or leaves out for space.
 
 **What the letter does.** It evaluates a finite scalar quantization (FSQ) tokenizer that encodes each month of a Sentinel-2 series into one of 625 codes. The tokenizer is trained without labels, by reconstruction or by masked prediction. It is compared with two non-learned controls fitted on the same data and matched in dimensionality and vocabulary:
 - rounded principal components of the monthly band means;
@@ -66,7 +68,7 @@ results/                      per-run result tables and aggregates (CSV / JSON),
   supplement_S4_sensitivity/  sensitivity analyses, Estonian few-shot probes, continued runs
   supplement_S5_runs/         per-class F1 in France, training stop epochs
   supplement_S8_training/     capped runs, parameter counts, training times
-manuscript/                   the supplement (.md/.tex/.pdf), the extended supplement and Figure 1 (.pdf/.png)
+manuscript/                   the supplement (.md/.tex/.pdf), the extended supplement (.md) and Figure 1 (.pdf/.png)
 ```
 
 ## Reproduce Table I, Table II and Figure 1 from `results/`
