@@ -37,6 +37,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.preprocessing import StandardScaler
 
 from fsq_matched_controls import paths
+from fsq_matched_controls.analysis.tolerances import GENERAL
 from fsq_matched_controls.data.cropglobe import CropGlobeDataModule
 from fsq_matched_controls.data.eurocropml import EuroCropsMLDataModule
 from fsq_matched_controls.models.encoder import TemporalCNNEncoder
@@ -52,8 +53,8 @@ EC_RUN = "eurocropml_predictive_ssl_625_heldout_estonia_gradclip_armN_seed11_vm_
 # flip at the quantizer's rounding boundaries, and the lbfgs fit can differ slightly with the BLAS library. Observed on Linux (CPU,
 # same pins), EuroCropsML masked prediction, seed 11: 3 of about 9.9 million token cells differ, accuracy |d| 8.5e-5, macro-F1 |d| 5.8e-4;
 # CropGlobe (strict Queensland, seed 11) gave identical scores there, although its token fingerprint differed too.
-# A run passes if every |d| is at most this tolerance.
-PLATFORM_TOLERANCE = 1e-3
+# A run passes if every |d| is at most this tolerance (analysis.tolerances.GENERAL).
+PLATFORM_TOLERANCE = GENERAL
 # SHA-256 of the letter's token arrays (float32, months flattened) for the default runs: (probe pool, {evaluation region: array}).
 TOKEN_SHA256 = {
     DEFAULT_RUN: ("5afe4fdca1990b2a707daf7b901c409da529cc5cb2fc2bf68a13d6d7ffab5714",

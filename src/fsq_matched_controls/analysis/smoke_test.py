@@ -6,7 +6,9 @@
    expected_letter_values.py): every number (as printed, three decimals), every raw p (Table I) and every bold flag.
 2. Byte-identity of the regenerated CSVs against the original analysis scripts' outputs shipped in results/:
    twin_step_tests.csv, teacher_twin_continued_step_tests.csv, bands_twin_continued_step_tests.csv, and Table I's S7.1 records
-   (results/letter_numbers/B.csv, item S71).
+   (results/letter_numbers/B.csv, item S71). Byte-identical on the letter's platform (Windows); elsewhere the p-values can differ
+   in the last one or two floating-point digits, and the check then requires every non-numeric cell identical and every number
+   within FLOAT_RELATIVE (analysis.tolerances) of the stored one (analysis.compare_tables).
 3. Figure 1: outputs/figure1_column.pdf against manuscript/figure1_column.pdf (bytes), and the figure's per-run constants against
    results/runs/n_probe_new_*.csv.
 Exit status 0 only if every check passes.
@@ -20,6 +22,7 @@ import sys
 import pandas as pd
 
 from fsq_matched_controls import paths
+from fsq_matched_controls.analysis.compare_tables import compare_csv, equal_to_float_precision
 from fsq_matched_controls.analysis import expected_letter_values, figure1, figure1_data, figure1_data_pre_ten_runs, step_tests, table1, table2, twins_continued
 from fsq_matched_controls.analysis import letter_runs as L
 
@@ -75,14 +78,19 @@ def main():
     step_tests.main(); twins_continued.main()
     for out, orig in (("twin_step_tests.csv", paths.TABLE2 / "twin_step_tests.csv"), ("teacher_twin_continued_step_tests.csv", paths.TABLE2 / "teacher_twin_continued_step_tests.csv"),
                       ("bands_twin_continued_step_tests.csv", paths.TABLE2 / "bands_twin_continued_step_tests.csv")):
-        same = filecmp.cmp(paths.OUTPUT / out, orig, shallow=False)
-        print(f"byte-identical with the original output {orig.relative_to(paths.RESULTS)}: {same}")
+        same, how = compare_csv(paths.OUTPUT / out, orig)
+        print(f"{orig.relative_to(paths.RESULTS)} against the original output: {how}")
         if not same:
             fails.append(f"{out} differs from {orig}")
     b = pd.read_csv(paths.LETTER_NUMBERS / "B.csv"); b = b[b["item"] == "S71"][s71.columns].reset_index(drop=True)
     a = pd.read_csv(paths.OUTPUT / "table1_s71.csv")
     same = bool((a.astype(str).values == b.astype(str).values).all()) and a.shape == b.shape
-    print(f"Table I S7.1 records identical to the original output letter_numbers/B.csv (item S71, {a.size} cells): {same}")
+    if same:
+        print(f"Table I S7.1 records identical to the original output letter_numbers/B.csv (item S71, {a.size} cells): True")
+    else:
+        same, d = equal_to_float_precision(a, b)
+        print(f"Table I S7.1 records identical to the original output letter_numbers/B.csv (item S71, {a.size} cells): False; "
+              f"equal to floating-point precision (max relative difference {d:.1e}): {same}")
     if not same:
         fails.append("table1_s71 differs from B.csv S71 records")
 
