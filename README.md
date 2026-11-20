@@ -185,6 +185,7 @@ python -m fsq_matched_controls.analysis.signflip_tests --compare     # S4.1, S7:
 python -m fsq_matched_controls.analysis.continued_runs --compare     # S4.1: Table I and the decomposition with the continued runs
 python -m fsq_matched_controls.analysis.parameter_counts             # S2: parameters of the tokenizers (from the configurations and the model code)
 python -m fsq_matched_controls.analysis.training_times --compare     # S2: training wall-clock from the MLflow records
+python -m fsq_matched_controls.analysis.capped_runs --compare        # S8: the capped runs and the estimate of their continuation
 ```
 
 With `--compare`, these commands check their tables against the stored ones: byte-identical on the letter's platform (Windows); elsewhere identical apart from line endings, or equal to floating-point precision (the last one or two digits of some p-values; `analysis/compare_tables.py`). `parameter_counts` prints whether every count equals the stored one.
@@ -222,7 +223,7 @@ With `--compare`, these commands check their tables against the stored ones: byt
 | Gradient boosting on the raw band means / ten-band k-means | 0.001 | identical to the Linux rebuild (`gradient_boosting_raw_linux.csv`); the Windows rebuild differs in the k-means rows by up to 1.3e-2 | the platform |
 | Rounded PCA and ten-band k-means, entropy (bits per month) | last stored digit | identical (one rounding tie at the fourth decimal) | – |
 | Smoke test: regenerated statistics tables (Table I's S7.1 records, Table II's step tests) | relative 1e-12 | 5.6e-16 (last one or two digits of some p-values); byte-identical on Windows | floating-point arithmetic of the platform |
-| Monthly band means, k-means fit statistics, parameter counts, training times | exact | identical (k-means fit statistics and training times: apart from line endings) | – |
+| Monthly band means, k-means fit statistics, parameter counts, training times, capped runs | exact | identical (k-means fit statistics and training times: apart from line endings) | – |
 | Sign-flip tests, continued runs (tables from `results/`) | relative 1e-12 | 4.3e-16 | floating-point arithmetic of the platform |
 
 Table I's verdicts recomputed with the rebuilt controls equal the letter's.
@@ -265,7 +266,7 @@ This version contains:
 - the two controls and the probe, rebuilt from the datasets and the checkpoints;
 - the supplement's analyses: S2 (parameters, training times), S3 (k-means fits, bits per month), S4 (sensitivity, Estonian few-shot, gradient boosting, continued runs), S5.2 (continuous PCA), S6 (rounding curve, grid distance), S7 (sign-flip tests).
 
-Kept as stored results, without a regenerating module: the rows of earlier diagnostics that feed these tables (`results/runs/diagnostic*`), the stop epochs and validation losses read from the training records (`results/supplement_S5_runs/`), the per-class F1 in France, and the capped runs of S8 (`results/supplement_S8_training/capped_runs_*`).
+Kept as stored results, without a regenerating module: the rows of earlier diagnostics that feed these tables (`results/runs/diagnostic*`), the stop epochs and validation losses read from the training records (`results/supplement_S5_runs/`), and the per-class F1 in France.
 
 ## How to cite
 

@@ -69,11 +69,13 @@ Per-run tables and aggregates behind the letter (Table I, Table II, Figure 1) an
 - `parameter_counts.csv`, `probe_parameter_counts.csv`: learnable parameters of the tokenizers and of the probe (Method, S2). → `analysis.parameter_counts`
 - `training_runs_mlflow_dump.csv`: the training records of the GPU node (start, end, status, last epoch and step per MLflow run). → `analysis.training_times`
 - `training_times_per_run.csv`, `training_times_summary.csv`: training wall-clock of the 80 runs (S2). → `analysis.training_times`
-- `capped_runs_*.csv`: the runs stopped at the epoch cap, and the estimate of the work to continue them (S8). In `capped_runs_estimate.csv`, `days_*_shared` assume the GPU shared with the other jobs of the time (half of it), `days_*_free` a free GPU.
+- `capped_runs_*.csv`: the runs stopped at the epoch cap, and the estimate of the work to continue them (S8). In `capped_runs_estimate.csv`, `days_*_shared` assume the GPU shared with the other jobs of the time (half of it), `days_*_free` a free GPU. → `analysis.capped_runs`
 
 ## Names in these files
 
 - `diagnosticNN_…`: NN is the analysis's number in the order the analyses were run; it carries no meaning beyond the file name.
 - `w6` (`diagnostic63_w6_…`): six latent dimensions instead of four.
 - The MLflow experiment names in the configurations and in `training_runs_mlflow_dump.csv` keep the original project prefix `croplang-fsq`, because they key the MLflow records.
+- `training_runs_mlflow_dump.csv` and `capped_runs_timing.csv` keep every training run of the GPU node, because the number of runs sharing the GPU is counted from them; runs other than the letter's (and, in the timing file, other than the capped runs) are labelled "other run on the node".
+- `training_runs_mlflow_dump.csv`: status FAILED on four of the letter's records means that training finished and the best checkpoint was saved, and a step after training failed.
 - `runs/n_runs.json` and `supplement_S4_sensitivity/continued_runs_registry.csv` keep the original configuration paths (`src/training/configs/<name>.yaml`); the same files are now in `configs/letter/`.
