@@ -351,7 +351,7 @@ fits).
 ### S4.2 Alternative quantizations of the PCA control
 
 The letter's rounded PCA control standardizes each month's four principal-component scores (zero
-mean, unit variance, fitted jointly over the probe's training and evaluation pools), clips them at
+mean, unit variance, fitted jointly over the probe's training and evaluation pools; on EuroCropsML over the training pool only, which is also the encoder's fit pool), clips them at
 ±2 standard deviations and rounds to the nearest integer: five levels per component, the same grid
 FSQ uses. Two alternatives were compared with it, each fitted on the setting's own pool (§S4.1): the
 same standardized scores without rounding (continuous), and an equal-mass grid that cuts each
@@ -404,7 +404,7 @@ p = 0.15 after the multiplier). The strict France result therefore depends on ho
 
 **Standardization fitted on the encoder's data.** The letter's rounded PCA standardizes its four scores on the probe's training and evaluation samples. Refitting that standardization on
 the encoder's fit pool instead (the principal components themselves are unchanged) changes one outcome of Table I: strict Queensland, reconstruction against rounded PCA, E → N under the t-test (it
-is already N under the sign-flip test, §S7.1b). Every masked-prediction outcome is unchanged.
+is already N under the sign-flip test, §S7.1b). Every masked-prediction outcome is unchanged. In Estonia the letter's control is already standardized on the encoder's fit pool; there the comparison starts from the version fitted on the training and evaluation samples.
 
 ### S4.3 Controls on the month's full window of observations
 
