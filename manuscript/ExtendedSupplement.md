@@ -244,6 +244,22 @@ loading:
 2.7.0 (CPU), scikit-learn 1.9.0 and NumPy 2.1.1. The gradient-boosting fits agree to four decimals with
 scikit-learn 1.9.1 on the training node (§S9.3).
 
+**Reproducibility.**
+
+| Item | CropGlobe | EuroCropsML |
+|---|---|---|
+| Optimizer | AdamW, weight decay 1e-4 | AdamW, weight decay 1e-4 |
+| Learning rate | 1e-3, halved after 10 epochs without validation improvement | 5e-4, halved after 10 epochs without validation improvement |
+| Batch | Masked prediction 64 series; reconstruction 448 windows (same steps per epoch) | Masked prediction 64 parcels; reconstruction 545 windows (same steps per epoch) |
+| Epoch cap / early-stopping patience | 100 / 15 | 200 / 25 |
+| Gradient clipping | None | 1.0 |
+| Validation split | 10 % of the pretraining samples (in the strict setting, the evaluation region excluded) | 10 % of the Latvia and Portugal pretraining samples |
+| Seeds, masked prediction | Transductive 1904, 2024, 4242, 11, 23, 37, 53, 71, 89, 97; strict 1904, 2024, 4242, 42, 101, 11, 23, 37, 53, 71 | 1904, 2024, 4242, 11, 23, 37, 53, 71, 89, 97 |
+| Seeds, reconstruction | 42, 101, 1904, 11, 23, 37, 53, 71, 89, 97 | 42, 101, 1904, 11, 23, 37, 53, 71, 89, 97 |
+| Hardware | One NVIDIA L40S GPU per run | One NVIDIA L40S per run, except masked prediction seed 1904 (one NVIDIA A100) |
+| Training software | PyTorch 2.14.0 (CUDA 13.0), Lightning 2.6.6, Ubuntu 24.04 | As CropGlobe, except the A100 run (a shared cluster) |
+| Probe, controls and tests | Python 3.12.10, PyTorch 2.7.0 (CPU), scikit-learn 1.9.0, NumPy 2.1.1, SciPy 1.15.2 | As CropGlobe |
+
 **Where each setting came from.**
 
 | Setting | Origin | Tuned? |
@@ -318,13 +334,15 @@ CropGlobe, 200 on EuroCropsML); the Check column marks them.
 
 ## S4. Non-learned controls
 
+**Reading of the submitted supplement's S4.1.** The outcomes that move are the French masked-prediction outcomes against the controls, strict-Queensland masked prediction against the ten-band vocabulary (E → S) and strict-Queensland reconstruction against rounded PCA. The letter already reports these as dependent on the test or on how the controls are built.
+
 ### S4.1 Construction and fit pools
 
 **Construction.** The dimensionality-matched control (rounded PCA) projects each month's 10-band vector onto its
 first four principal components (fitted without labels) and rounds them onto the same five-level
 grid FSQ uses; it differs from the FSQ tokenizer only in that its projection is not learned, and it
 is deterministic given its fit data. The vocabulary-matched control (k-means-625) is mini-batch
-k-means with 625 centroids (`batch_size=4096`, `n_init=5`, `max_iter=300`) fitted on the months'
+k-means with 625 centroids (k-means++ initialization, `batch_size=4096`, `n_init=5`, `max_iter=300`) fitted on the months'
 four principal-component scores, standardized on the fit pool; in the probe each month is
 represented by its centroid, four numbers, like the tokenizer and the rounded PCA. Because the
 result depends on centroid initialization, it is fitted five times per fit pool and reported as the
@@ -508,7 +526,7 @@ PCA are then those of Table I in every row except strict France, where one metri
 k-means outcomes in every row; BIRCH, a weaker partition in France, is the only form under which transductive France reaches a outcome above N.
 The multiplier of §S7 changes five outcomes of this table, each by one level (without it: France transductive, ten-band with four numbers N → S, both
 one-hot forms N → S, BIRCH S → E; strict Queensland, ten-band S → E). Fit-to-fit standard deviation of the letter's control: 0.0006–0.0016 in
-accuracy and 0.0010–0.0026 in macro-F1 (ten-band: up to 0.0038 and 0.0057).
+accuracy and 0.0010–0.0026 in macro-F1 (ten-band: up to 0.0038 and 0.0057). A one-sided Welch test of the ten masked-prediction runs against the five fits gives practically the same p as the one-sample test against their mean (strict France accuracy: 0.0074 and 0.0074).
 
 ### S4.5 A spectral-index control
 
@@ -943,7 +961,7 @@ Every comparison of a learned representation with a control is a one-sided one-s
 **Probe convergence.** The probe (standardization, then logistic regression with lbfgs and at most 300 iterations) stops at the iteration limit for raw bands (in Queensland
 on some machines only), so their scores depend slightly on the numerical environment (library versions, threads). Across the machines and runs checked, Estonia raw bands score 0.2460 to
 0.2462 in accuracy and 0.0953 to 0.0975 in macro-F1 (Table II prints 0.246 / 0.097); the other raw-band scores move by at most 0.0015 in accuracy and 0.0022 in macro-F1.
-Converged fits (300 to 900 iterations) agree across environments to 0.0013: France 0.783 / 0.791, Queensland 0.708 / 0.638 to 0.639, Estonia 0.249 / 0.102. The letter keeps
+Converged fits (300 to 900 iterations) agree across environments to 0.0013: France 0.783 / 0.791, Queensland 0.708 / 0.638 to 0.639, Estonia 0.249 / 0.102. With 2,000 iterations they score 0.783, 0.708 and 0.249 in accuracy. The letter keeps
 the 300-iteration protocol as declared. Raw bands enter no outcome of Table I, only the width column of Table II. The controls' and the encoders' probe scores
 reproduced within 0.0005 in every check of this document. At that size two outcomes sit at the threshold, the same two that change under the sign-flip test (§S7.1b):
 raising the rounded PCA control by 0.0005 turns strict-Queensland reconstruction against it from E to S, and raising the k-means control by 0.001 turns strict
