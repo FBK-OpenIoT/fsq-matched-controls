@@ -25,7 +25,17 @@ This material supports the letter's claims; it is not needed to follow them. Cit
 
 **The k-means vocabulary** is scikit-learn mini-batch k-means with 625 centroids on the four principal-component scores, standardized on the fit pool; each month is represented by the coordinates of its centroid. It is fitted five times per row with seeds 1904, 42, 101, 2024 and 4242, and the letter uses the mean of the five fits. The fit-to-fit standard deviation is 0.0006 to 0.0016 in accuracy and 0.0010 to 0.0026 in macro-F1.
 
-**Code usage.** Bits per month are the entropy of the empirical distribution of the joint month code on the evaluation region (ceiling log2 625 = 9.29). Rounded PCA uses 5.8 to 6.4 bits, the masked-prediction tokens (mean of the ten runs) 7.8 to 8.5 and k-means (mean of the five fits) 8.3 to 8.8; single masked-prediction runs reach up to 8.78, so k-means uses more bits than the tokens' mean, not than every run.
+**Code usage.** Bits per month are the entropy of the empirical distribution of the joint month code on the evaluation region (ceiling log2 625 = 9.29). Masked prediction: the mean of the ten runs; k-means: the mean of the five fits.
+
+| Row | Rounded PCA | k-means | Masked-prediction tokens |
+|---|---|---|---|
+| France, transductive | 6.38 | 8.75 | 8.48 |
+| Queensland, transductive | 5.77 | 8.34 | 8.15 |
+| France, strict | 6.38 | 8.55 | 8.29 |
+| Queensland, strict | 5.78 | 8.29 | 8.16 |
+| Estonia | 5.96 | 8.34 | 7.83 |
+
+Single masked-prediction runs reach up to 8.78 bits (8.78 / 8.53 / 8.41 / 8.41 / 8.18 per row), so k-means uses more bits than the tokens' mean, not than every run.
 
 ## S4. Sensitivity of the outcomes
 
