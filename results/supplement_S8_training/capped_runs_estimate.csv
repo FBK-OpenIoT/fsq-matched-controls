@@ -1,4 +1,4 @@
-option,runs,runs_EuroCropsML,gpu_hours_upper,gpu_hours_lower,days_upper_free,days_lower_free,days_upper_with_BF_J4,days_lower_with_BF_J4
+option,runs,runs_EuroCropsML,gpu_hours_upper,gpu_hours_lower,days_upper_free,days_lower_free,days_upper_shared,days_lower_shared
 (i) twin_teacher + FSQ-trained capped runs,57,12,66.3908871056077,9.089037596268737,2.766286962733654,0.3787098998445307,5.532573925467308,0.7574197996890614
 (ii) (i) + twin_bands,89,19,94.47585285210711,12.811184628149793,3.9364938688377964,0.5337993595062414,7.872987737675593,1.0675987190124827
 "(iii-a) CropGlobe only, twin_teacher + FSQ-trained",45,0,39.824335452701106,5.856165466512303,1.6593473105292127,0.24400689443801263,3.3186946210584254,0.48801378887602526

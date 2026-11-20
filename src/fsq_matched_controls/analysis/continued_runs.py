@@ -2,11 +2,14 @@
 
     python -m fsq_matched_controls.analysis.continued_runs [--compare]     -> outputs/continued_runs_matched_tests_estonia.csv
 
-Table I's statistics (letter_runs.analyse, unchanged) with the masked-prediction token scores of the continued runs substituted:
-    LETTER                the capped runs, as in the letter;
-    E1 only               the 19 continued CropGlobe runs replace their capped originals (best checkpoint);
-    P (E1 + E8c, best)    and the two continued Estonia runs (seeds 4242 and 97, best checkpoint);
-    S2 (E1 + E8c, final)  the same with the final-epoch checkpoints.
+Table I's statistics (letter_runs.analyse, unchanged) with the masked-prediction token scores of the continued runs substituted
+(stage column of continued_runs_matched_tests_estonia.csv):
+    letter (capped runs)                          the capped runs, as in the letter;
+    continued CropGlobe runs, best checkpoint     the 19 continued CropGlobe runs replace their capped originals;
+    all continued runs, best checkpoint           and the two continued Estonia runs (seeds 4242 and 97);
+    all continued runs, final-epoch checkpoint    the same with the final-epoch checkpoints.
+continued_runs_matched_tests.csv: the same for the CropGlobe runs, t and sign-flip (scenarios letter; all continued, best; low runs
+continued, best; all continued, final). continued_runs_decomposition.csv: the decomposition of Table II with the continued runs.
 Reconstruction runs are never substituted. Inputs: results/supplement_S4_sensitivity/continued_runs_probe.csv (CropGlobe; columns
 new_* = best checkpoint, final_* = final epoch) and continued_runs_estonia_probe_best.csv / _final.csv (Estonia).
 """
@@ -21,6 +24,12 @@ from fsq_matched_controls.analysis import letter_runs as L
 
 ROW_OF = {("transductive", "FRA"): "France, transductive", ("transductive", "AUS"): "Australia, transductive",
           ("strict_FRA", "FRA"): "France, strict", ("strict_AUS", "AUS"): "Australia, strict"}
+# readable labels of the stages and scenarios, applied when the tables are written
+STAGE_LABEL = {"LETTER": "letter (capped runs)", "E1 only": "continued CropGlobe runs, best checkpoint",
+               "P (E1 + E8c, best)": "all continued runs, best checkpoint", "S2 (E1 + E8c, final)": "all continued runs, final-epoch checkpoint"}
+DECOMPOSITION_LABEL = {"LETTER": "letter", "E1-BEST": "CropGlobe continued, best", "E1-FINAL": "CropGlobe continued, final",
+                       "E8c-BEST": "EuroCropsML continued, best", "E8c-FINAL": "EuroCropsML continued, final"}
+SCENARIO_LABEL = {"L": "letter", "P": "all continued, best", "S1": "low runs continued, best", "S2": "all continued, final"}
 STAGES = {"LETTER": (False, False, False), "E1 only": (True, False, False), "P (E1 + E8c, best)": (True, True, False),
           "S2 (E1 + E8c, final)": (True, True, True)}
 
@@ -256,14 +265,18 @@ def scenarios():
 def main():
     paths.OUTPUT.mkdir(parents=True, exist_ok=True)
     catchup().to_csv(paths.OUTPUT / "continued_runs_catchup.csv", index=False)
-    scenarios().to_csv(paths.OUTPUT / "continued_runs_matched_tests.csv", index=False)
+    sc = scenarios(); sc["scenario"] = sc["scenario"].map(SCENARIO_LABEL)
+    sc.to_csv(paths.OUTPUT / "continued_runs_matched_tests.csv", index=False)
     df = table()
+    v = df.drop_duplicates(["stage", "row", "col"]).pivot(index=["row", "col"], columns="stage", values="verdict")[list(STAGES)]
+    print(v.rename(columns=STAGE_LABEL).to_string())
+    df["stage"] = df["stage"].map(STAGE_LABEL)
     out = paths.OUTPUT / "continued_runs_matched_tests_estonia.csv"
     df.to_csv(out, index=False)
-    v = df.drop_duplicates(["stage", "row", "col"]).pivot(index=["row", "col"], columns="stage", values="verdict")[list(STAGES)]
-    print(v.to_string())
     out2 = paths.OUTPUT / "continued_runs_decomposition.csv"
-    decomposition().to_csv(out2, index=False)
+    R = decomposition(); R["stage"] = R["stage"].map(DECOMPOSITION_LABEL)
+    R = R.rename(columns={c: c.split("@")[0] + "@" + DECOMPOSITION_LABEL[c.split("@")[1]] for c in R.columns if "@" in c})
+    R.to_csv(out2, index=False)
     print(f"-> {out}, {out2}")
 
 

@@ -69,7 +69,7 @@ Per-run tables and aggregates behind the letter (Table I, Table II, Figure 1) an
 - `parameter_counts.csv`, `probe_parameter_counts.csv`: learnable parameters of the tokenizers and of the probe (Method, S2). → `analysis.parameter_counts`
 - `training_runs_mlflow_dump.csv`: the training records of the GPU node (start, end, status, last epoch and step per MLflow run). → `analysis.training_times`
 - `training_times_per_run.csv`, `training_times_summary.csv`: training wall-clock of the 80 runs (S2). → `analysis.training_times`
-- `capped_runs_*.csv`: the runs stopped at the epoch cap, and the estimate of the work to continue them (S8).
+- `capped_runs_*.csv`: the runs stopped at the epoch cap, and the estimate of the work to continue them (S8). In `capped_runs_estimate.csv`, `days_*_shared` assume the GPU shared with the other jobs of the time (half of it), `days_*_free` a free GPU.
 
 ## Names in these files
 

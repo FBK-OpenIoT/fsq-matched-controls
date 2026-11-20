@@ -1,121 +1,121 @@
 stage,row,col,metric,margin,p_raw,p_holm,holm_sig,verdict
-LETTER,"France, transductive",MP-PCA,acc,0.021227503568172768,0.08254436061094406,0.1650887212218881,False,S
-LETTER,"France, transductive",MP-PCA,f1,0.0623541192429139,0.018713770087393836,0.03742754017478767,True,S
-LETTER,"France, transductive",MP-kmeans,acc,0.00229899501837022,0.43681560844461853,0.8736312168892371,False,N
-LETTER,"France, transductive",MP-kmeans,f1,0.03922899440469474,0.07964596968037084,0.15929193936074168,False,N
-LETTER,"France, transductive",MP-recon,acc,0.07750600705347177,0.00015840836856698386,0.0003653109419308841,True,E
-LETTER,"France, transductive",MP-recon,f1,0.11149805416971126,0.0008701797647405292,0.0017403595294810583,True,E
-LETTER,"Australia, transductive",MP-PCA,acc,0.11825900058321408,5.738102603273577e-07,4.590482082618861e-06,True,E
-LETTER,"Australia, transductive",MP-PCA,f1,0.2212056854984886,3.6767592469875756e-07,2.9414073975900605e-06,True,E
-LETTER,"Australia, transductive",MP-kmeans,acc,0.11071118763586232,1.001186641769026e-06,8.009493134152208e-06,True,E
-LETTER,"Australia, transductive",MP-kmeans,f1,0.20175398087909652,8.024641310754506e-07,6.419713048603605e-06,True,E
-LETTER,"Australia, transductive",MP-recon,acc,0.10613850856264251,1.4412083277438205e-07,1.1529666621950564e-06,True,E
-LETTER,"Australia, transductive",MP-recon,f1,0.2064266550816447,9.737291297965027e-08,7.789833038372021e-07,True,E
-LETTER,"France, strict",MP-PCA,acc,0.05128235591487951,0.0007893646367063954,0.004736187820238372,True,E
-LETTER,"France, strict",MP-PCA,f1,0.12057312534290503,1.4273975515338698e-05,8.564385309203219e-05,True,E
-LETTER,"France, strict",MP-kmeans,acc,0.03454837770145214,0.007427205740186968,0.04456323444112181,True,E
-LETTER,"France, strict",MP-kmeans,f1,0.10036555916327643,5.908761220422577e-05,0.0003545256732253546,True,E
-LETTER,"France, strict",MP-recon,acc,0.11141125295813037,1.1711427980759824e-06,1.0540285182683841e-05,True,E
-LETTER,"France, strict",MP-recon,f1,0.17466318353829324,4.048699220866652e-07,3.6438292987799873e-06,True,E
-LETTER,"Australia, strict",MP-PCA,acc,0.0948312332325964,2.2506752381329545e-05,0.00020256077143196593,True,E
-LETTER,"Australia, strict",MP-PCA,f1,0.2005237864388388,1.0022598608526056e-06,9.02033874767345e-06,True,E
-LETTER,"Australia, strict",MP-kmeans,acc,0.08349402417687296,5.985249696337237e-05,0.0005386724726703514,True,E
-LETTER,"Australia, strict",MP-kmeans,f1,0.1755690988169109,3.030503428298373e-06,2.7274530854685355e-05,True,E
-LETTER,"Australia, strict",MP-recon,acc,0.07904181591644133,6.088515698848068e-05,0.0003653109419308841,True,E
-LETTER,"Australia, strict",MP-recon,f1,0.17916280032970777,1.1746745637221224e-06,7.048047382332734e-06,True,E
-LETTER,Estonia,MP-PCA,acc,0.04242337502131771,8.025669050667173e-10,8.025669050667174e-09,True,E
-LETTER,Estonia,MP-PCA,f1,0.03156812773473439,2.2613775776738938e-08,2.2613775776738938e-07,True,E
-LETTER,Estonia,MP-kmeans,acc,0.03485758001250644,4.565486165040354e-09,4.565486165040354e-08,True,E
-LETTER,Estonia,MP-kmeans,f1,0.027725577740611913,7.001863392995721e-08,7.001863392995721e-07,True,E
-LETTER,Estonia,MP-recon,acc,0.057296204309021714,4.51472763278896e-12,4.51472763278896e-11,True,E
-LETTER,Estonia,MP-recon,f1,0.04388272895971227,5.181631204071459e-10,5.181631204071459e-09,True,E
-E1 only,"France, transductive",MP-PCA,acc,0.021669959023563713,0.07871312371528225,0.1574262474305645,False,S
-E1 only,"France, transductive",MP-PCA,f1,0.0614956567729439,0.020380611355544788,0.040761222711089576,True,S
-E1 only,"France, transductive",MP-kmeans,acc,0.0027414504737611643,0.42482485911246937,0.8496497182249387,False,N
-E1 only,"France, transductive",MP-kmeans,f1,0.03837053193472474,0.08528982260970416,0.17057964521940833,False,N
-E1 only,"France, transductive",MP-recon,acc,0.07794846250886267,0.000151896004103477,0.0003677223585204115,True,E
-E1 only,"France, transductive",MP-recon,f1,0.11063959169974114,0.0009631765407349717,0.0019263530814699434,True,E
-E1 only,"Australia, transductive",MP-PCA,acc,0.1153281782514183,9.786547867775251e-07,7.829238294220201e-06,True,E
-E1 only,"Australia, transductive",MP-PCA,f1,0.21783008272338708,5.269426087261327e-07,4.215540869809062e-06,True,E
-E1 only,"Australia, transductive",MP-kmeans,acc,0.10778036530406654,1.7244523264298182e-06,1.3795618611438546e-05,True,E
-E1 only,"Australia, transductive",MP-kmeans,f1,0.198378378103995,1.159995637047775e-06,9.2799650963822e-06,True,E
-E1 only,"Australia, transductive",MP-recon,acc,0.10320768623084664,3.419300634059817e-07,2.7354405072478535e-06,True,E
-E1 only,"Australia, transductive",MP-recon,f1,0.2030510523065432,1.6885979720516368e-07,1.3508783776413095e-06,True,E
-E1 only,"France, strict",MP-PCA,acc,0.0494706420869437,0.0011989010019433912,0.0071934060116603474,True,E
-E1 only,"France, strict",MP-PCA,f1,0.12013109985917265,1.1528350003560421e-05,6.917010002136252e-05,True,E
-E1 only,"France, strict",MP-kmeans,acc,0.03273666387351633,0.011019732420200498,0.066118394521203,False,S
-E1 only,"France, strict",MP-kmeans,f1,0.09992353367954404,4.8488270140142705e-05,0.00029092962084085626,True,S
-E1 only,"France, strict",MP-recon,acc,0.10959953913019449,1.8646220922200744e-06,1.678159882998067e-05,True,E
-E1 only,"France, strict",MP-recon,f1,0.17422115805456073,3.0382290276799887e-07,2.7344061249119896e-06,True,E
-E1 only,"Australia, strict",MP-PCA,acc,0.09533101744340178,2.27560251576651e-05,0.0002048042264189859,True,E
-E1 only,"Australia, strict",MP-PCA,f1,0.20065130248186694,1.1023605426438978e-06,9.921244883795081e-06,True,E
-E1 only,"Australia, strict",MP-kmeans,acc,0.08399380838767834,6.016785772256041e-05,0.0005415107195030437,True,E
-E1 only,"Australia, strict",MP-kmeans,f1,0.17569661485993898,3.3244305293699675e-06,2.9919874764329708e-05,True,E
-E1 only,"Australia, strict",MP-recon,acc,0.07954160012724676,6.128705975340192e-05,0.0003677223585204115,True,E
-E1 only,"Australia, strict",MP-recon,f1,0.17929031637273596,1.3273234739757459e-06,7.963940843854476e-06,True,E
-E1 only,Estonia,MP-PCA,acc,0.04242337502131771,8.025669050667173e-10,8.025669050667174e-09,True,E
-E1 only,Estonia,MP-PCA,f1,0.03156812773473439,2.2613775776738938e-08,2.2613775776738938e-07,True,E
-E1 only,Estonia,MP-kmeans,acc,0.03485758001250644,4.565486165040354e-09,4.565486165040354e-08,True,E
-E1 only,Estonia,MP-kmeans,f1,0.027725577740611913,7.001863392995721e-08,7.001863392995721e-07,True,E
-E1 only,Estonia,MP-recon,acc,0.057296204309021714,4.51472763278896e-12,4.51472763278896e-11,True,E
-E1 only,Estonia,MP-recon,f1,0.04388272895971227,5.181631204071459e-10,5.181631204071459e-09,True,E
-"P (E1 + E8c, best)","France, transductive",MP-PCA,acc,0.021669959023563713,0.07871312371528225,0.1574262474305645,False,S
-"P (E1 + E8c, best)","France, transductive",MP-PCA,f1,0.0614956567729439,0.020380611355544788,0.040761222711089576,True,S
-"P (E1 + E8c, best)","France, transductive",MP-kmeans,acc,0.0027414504737611643,0.42482485911246937,0.8496497182249387,False,N
-"P (E1 + E8c, best)","France, transductive",MP-kmeans,f1,0.03837053193472474,0.08528982260970416,0.17057964521940833,False,N
-"P (E1 + E8c, best)","France, transductive",MP-recon,acc,0.07794846250886267,0.000151896004103477,0.0003677223585204115,True,E
-"P (E1 + E8c, best)","France, transductive",MP-recon,f1,0.11063959169974114,0.0009631765407349717,0.0019263530814699434,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-PCA,acc,0.1153281782514183,9.786547867775251e-07,7.829238294220201e-06,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-PCA,f1,0.21783008272338708,5.269426087261327e-07,4.215540869809062e-06,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-kmeans,acc,0.10778036530406654,1.7244523264298182e-06,1.3795618611438546e-05,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-kmeans,f1,0.198378378103995,1.159995637047775e-06,9.2799650963822e-06,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-recon,acc,0.10320768623084664,3.419300634059817e-07,2.7354405072478535e-06,True,E
-"P (E1 + E8c, best)","Australia, transductive",MP-recon,f1,0.2030510523065432,1.6885979720516368e-07,1.3508783776413095e-06,True,E
-"P (E1 + E8c, best)","France, strict",MP-PCA,acc,0.0494706420869437,0.0011989010019433912,0.0071934060116603474,True,E
-"P (E1 + E8c, best)","France, strict",MP-PCA,f1,0.12013109985917265,1.1528350003560421e-05,6.917010002136252e-05,True,E
-"P (E1 + E8c, best)","France, strict",MP-kmeans,acc,0.03273666387351633,0.011019732420200498,0.066118394521203,False,S
-"P (E1 + E8c, best)","France, strict",MP-kmeans,f1,0.09992353367954404,4.8488270140142705e-05,0.00029092962084085626,True,S
-"P (E1 + E8c, best)","France, strict",MP-recon,acc,0.10959953913019449,1.8646220922200744e-06,1.678159882998067e-05,True,E
-"P (E1 + E8c, best)","France, strict",MP-recon,f1,0.17422115805456073,3.0382290276799887e-07,2.7344061249119896e-06,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-PCA,acc,0.09533101744340178,2.27560251576651e-05,0.0002048042264189859,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-PCA,f1,0.20065130248186694,1.1023605426438978e-06,9.921244883795081e-06,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-kmeans,acc,0.08399380838767834,6.016785772256041e-05,0.0005415107195030437,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-kmeans,f1,0.17569661485993898,3.3244305293699675e-06,2.9919874764329708e-05,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-recon,acc,0.07954160012724676,6.128705975340192e-05,0.0003677223585204115,True,E
-"P (E1 + E8c, best)","Australia, strict",MP-recon,f1,0.17929031637273596,1.3273234739757459e-06,7.963940843854476e-06,True,E
-"P (E1 + E8c, best)",Estonia,MP-PCA,acc,0.04236662668409981,7.495032195408728e-10,7.495032195408728e-09,True,E
-"P (E1 + E8c, best)",Estonia,MP-PCA,f1,0.031504853712279395,2.332163413991041e-08,2.332163413991041e-07,True,E
-"P (E1 + E8c, best)",Estonia,MP-kmeans,acc,0.03480083167528854,4.2764664418308175e-09,4.276466441830817e-08,True,E
-"P (E1 + E8c, best)",Estonia,MP-kmeans,f1,0.027662303718156915,7.236607294814737e-08,7.236607294814738e-07,True,E
-"P (E1 + E8c, best)",Estonia,MP-recon,acc,0.0572394559718038,3.975640651686175e-12,3.9756406516861744e-11,True,E
-"P (E1 + E8c, best)",Estonia,MP-recon,f1,0.04381945493725726,5.343169646870251e-10,5.343169646870252e-09,True,E
-"S2 (E1 + E8c, final)","France, transductive",MP-PCA,acc,0.02111746774832176,0.08389916073410017,0.16779832146820034,False,S
-"S2 (E1 + E8c, final)","France, transductive",MP-PCA,f1,0.06175750446716636,0.019661172094197425,0.03932234418839485,True,S
-"S2 (E1 + E8c, final)","France, transductive",MP-kmeans,acc,0.0021889591985192135,0.4399272282752944,0.8798544565505888,False,N
-"S2 (E1 + E8c, final)","France, transductive",MP-kmeans,f1,0.0386323796289472,0.08305674423739122,0.16611348847478244,False,N
-"S2 (E1 + E8c, final)","France, transductive",MP-recon,acc,0.07739597123362085,0.0001625832272993671,0.0003251664545987342,True,E
-"S2 (E1 + E8c, final)","France, transductive",MP-recon,f1,0.1109014393939638,0.0009183066760560835,0.001836613352112167,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-PCA,acc,0.11551904830072637,1.35063927751676e-06,1.080511422013408e-05,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-PCA,f1,0.21782370110784388,6.559640824273886e-07,5.2477126594191085e-06,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-kmeans,acc,0.10797123535337465,2.3702009109345525e-06,1.896160728747642e-05,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-kmeans,f1,0.19837199648845177,1.44030378902022e-06,1.152243031216176e-05,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-recon,acc,0.10339855628015493,5.665174268609078e-07,4.532139414887262e-06,True,E
-"S2 (E1 + E8c, final)","Australia, transductive",MP-recon,f1,0.20304467069100007,2.3795207501442864e-07,1.9036166001154291e-06,True,E
-"S2 (E1 + E8c, final)","France, strict",MP-PCA,acc,0.04915572206005577,0.0009851778001682431,0.005911066801009459,True,E
-"S2 (E1 + E8c, final)","France, strict",MP-PCA,f1,0.1213754768155801,6.849883269550066e-06,4.10992996173004e-05,True,E
-"S2 (E1 + E8c, final)","France, strict",MP-kmeans,acc,0.0324217438466284,0.009689378201716005,0.058136269210296035,False,S
-"S2 (E1 + E8c, final)","France, strict",MP-kmeans,f1,0.1011679106359515,2.902235423370287e-05,0.00017413412540221723,True,S
-"S2 (E1 + E8c, final)","France, strict",MP-recon,acc,0.10928461910330656,1.2935796478252032e-06,1.1642216830426828e-05,True,E
-"S2 (E1 + E8c, final)","France, strict",MP-recon,f1,0.1754655350109683,1.6123328742637323e-07,1.9036166001154291e-06,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-PCA,acc,0.09548477387201107,1.9707625286891502e-05,0.00017736862758202353,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-PCA,f1,0.20148214574569773,8.326682473011645e-07,7.49401422571048e-06,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-kmeans,acc,0.08414756481628763,5.2287853376232875e-05,0.00047059068038609583,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-kmeans,f1,0.1765274581237698,2.5126094028596117e-06,2.2613484625736505e-05,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-recon,acc,0.07969535655585602,5.1766844641279775e-05,0.0003106010678476786,True,E
-"S2 (E1 + E8c, final)","Australia, strict",MP-recon,f1,0.18012115963656672,9.251714695565528e-07,5.551028817339317e-06,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-PCA,acc,0.042463267011539976,7.723026879296384e-10,7.723026879296383e-09,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-PCA,f1,0.031649888535744644,2.1858967807598776e-08,2.1858967807598775e-07,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-kmeans,acc,0.034897472002728705,4.38652209495449e-09,4.38652209495449e-08,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-kmeans,f1,0.027807338541622168,6.749085966391571e-08,6.749085966391571e-07,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-recon,acc,0.057336096299243966,4.2574122914884616e-12,4.257412291488462e-11,True,E
-"S2 (E1 + E8c, final)",Estonia,MP-recon,f1,0.043964489760722515,5.017490330980556e-10,5.017490330980556e-09,True,E
+letter (capped runs),"France, transductive",MP-PCA,acc,0.021227503568172768,0.08254436061094406,0.1650887212218881,False,S
+letter (capped runs),"France, transductive",MP-PCA,f1,0.0623541192429139,0.018713770087393836,0.03742754017478767,True,S
+letter (capped runs),"France, transductive",MP-kmeans,acc,0.00229899501837022,0.43681560844461853,0.8736312168892371,False,N
+letter (capped runs),"France, transductive",MP-kmeans,f1,0.03922899440469474,0.07964596968037084,0.15929193936074168,False,N
+letter (capped runs),"France, transductive",MP-recon,acc,0.07750600705347177,0.00015840836856698386,0.0003653109419308841,True,E
+letter (capped runs),"France, transductive",MP-recon,f1,0.11149805416971126,0.0008701797647405292,0.0017403595294810583,True,E
+letter (capped runs),"Australia, transductive",MP-PCA,acc,0.11825900058321408,5.738102603273577e-07,4.590482082618861e-06,True,E
+letter (capped runs),"Australia, transductive",MP-PCA,f1,0.2212056854984886,3.6767592469875756e-07,2.9414073975900605e-06,True,E
+letter (capped runs),"Australia, transductive",MP-kmeans,acc,0.11071118763586232,1.001186641769026e-06,8.009493134152208e-06,True,E
+letter (capped runs),"Australia, transductive",MP-kmeans,f1,0.20175398087909652,8.024641310754506e-07,6.419713048603605e-06,True,E
+letter (capped runs),"Australia, transductive",MP-recon,acc,0.10613850856264251,1.4412083277438205e-07,1.1529666621950564e-06,True,E
+letter (capped runs),"Australia, transductive",MP-recon,f1,0.2064266550816447,9.737291297965027e-08,7.789833038372021e-07,True,E
+letter (capped runs),"France, strict",MP-PCA,acc,0.05128235591487951,0.0007893646367063954,0.004736187820238372,True,E
+letter (capped runs),"France, strict",MP-PCA,f1,0.12057312534290503,1.4273975515338698e-05,8.564385309203219e-05,True,E
+letter (capped runs),"France, strict",MP-kmeans,acc,0.03454837770145214,0.007427205740186968,0.04456323444112181,True,E
+letter (capped runs),"France, strict",MP-kmeans,f1,0.10036555916327643,5.908761220422577e-05,0.0003545256732253546,True,E
+letter (capped runs),"France, strict",MP-recon,acc,0.11141125295813037,1.1711427980759824e-06,1.0540285182683841e-05,True,E
+letter (capped runs),"France, strict",MP-recon,f1,0.17466318353829324,4.048699220866652e-07,3.6438292987799873e-06,True,E
+letter (capped runs),"Australia, strict",MP-PCA,acc,0.0948312332325964,2.2506752381329545e-05,0.00020256077143196593,True,E
+letter (capped runs),"Australia, strict",MP-PCA,f1,0.2005237864388388,1.0022598608526056e-06,9.02033874767345e-06,True,E
+letter (capped runs),"Australia, strict",MP-kmeans,acc,0.08349402417687296,5.985249696337237e-05,0.0005386724726703514,True,E
+letter (capped runs),"Australia, strict",MP-kmeans,f1,0.1755690988169109,3.030503428298373e-06,2.7274530854685355e-05,True,E
+letter (capped runs),"Australia, strict",MP-recon,acc,0.07904181591644133,6.088515698848068e-05,0.0003653109419308841,True,E
+letter (capped runs),"Australia, strict",MP-recon,f1,0.17916280032970777,1.1746745637221224e-06,7.048047382332734e-06,True,E
+letter (capped runs),Estonia,MP-PCA,acc,0.04242337502131771,8.025669050667173e-10,8.025669050667174e-09,True,E
+letter (capped runs),Estonia,MP-PCA,f1,0.03156812773473439,2.2613775776738938e-08,2.2613775776738938e-07,True,E
+letter (capped runs),Estonia,MP-kmeans,acc,0.03485758001250644,4.565486165040354e-09,4.565486165040354e-08,True,E
+letter (capped runs),Estonia,MP-kmeans,f1,0.027725577740611913,7.001863392995721e-08,7.001863392995721e-07,True,E
+letter (capped runs),Estonia,MP-recon,acc,0.057296204309021714,4.51472763278896e-12,4.51472763278896e-11,True,E
+letter (capped runs),Estonia,MP-recon,f1,0.04388272895971227,5.181631204071459e-10,5.181631204071459e-09,True,E
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-PCA,acc,0.021669959023563713,0.07871312371528225,0.1574262474305645,False,S
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-PCA,f1,0.0614956567729439,0.020380611355544788,0.040761222711089576,True,S
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-kmeans,acc,0.0027414504737611643,0.42482485911246937,0.8496497182249387,False,N
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-kmeans,f1,0.03837053193472474,0.08528982260970416,0.17057964521940833,False,N
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-recon,acc,0.07794846250886267,0.000151896004103477,0.0003677223585204115,True,E
+"continued CropGlobe runs, best checkpoint","France, transductive",MP-recon,f1,0.11063959169974114,0.0009631765407349717,0.0019263530814699434,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-PCA,acc,0.1153281782514183,9.786547867775251e-07,7.829238294220201e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-PCA,f1,0.21783008272338708,5.269426087261327e-07,4.215540869809062e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-kmeans,acc,0.10778036530406654,1.7244523264298182e-06,1.3795618611438546e-05,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-kmeans,f1,0.198378378103995,1.159995637047775e-06,9.2799650963822e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-recon,acc,0.10320768623084664,3.419300634059817e-07,2.7354405072478535e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, transductive",MP-recon,f1,0.2030510523065432,1.6885979720516368e-07,1.3508783776413095e-06,True,E
+"continued CropGlobe runs, best checkpoint","France, strict",MP-PCA,acc,0.0494706420869437,0.0011989010019433912,0.0071934060116603474,True,E
+"continued CropGlobe runs, best checkpoint","France, strict",MP-PCA,f1,0.12013109985917265,1.1528350003560421e-05,6.917010002136252e-05,True,E
+"continued CropGlobe runs, best checkpoint","France, strict",MP-kmeans,acc,0.03273666387351633,0.011019732420200498,0.066118394521203,False,S
+"continued CropGlobe runs, best checkpoint","France, strict",MP-kmeans,f1,0.09992353367954404,4.8488270140142705e-05,0.00029092962084085626,True,S
+"continued CropGlobe runs, best checkpoint","France, strict",MP-recon,acc,0.10959953913019449,1.8646220922200744e-06,1.678159882998067e-05,True,E
+"continued CropGlobe runs, best checkpoint","France, strict",MP-recon,f1,0.17422115805456073,3.0382290276799887e-07,2.7344061249119896e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-PCA,acc,0.09533101744340178,2.27560251576651e-05,0.0002048042264189859,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-PCA,f1,0.20065130248186694,1.1023605426438978e-06,9.921244883795081e-06,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-kmeans,acc,0.08399380838767834,6.016785772256041e-05,0.0005415107195030437,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-kmeans,f1,0.17569661485993898,3.3244305293699675e-06,2.9919874764329708e-05,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-recon,acc,0.07954160012724676,6.128705975340192e-05,0.0003677223585204115,True,E
+"continued CropGlobe runs, best checkpoint","Australia, strict",MP-recon,f1,0.17929031637273596,1.3273234739757459e-06,7.963940843854476e-06,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-PCA,acc,0.04242337502131771,8.025669050667173e-10,8.025669050667174e-09,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-PCA,f1,0.03156812773473439,2.2613775776738938e-08,2.2613775776738938e-07,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-kmeans,acc,0.03485758001250644,4.565486165040354e-09,4.565486165040354e-08,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-kmeans,f1,0.027725577740611913,7.001863392995721e-08,7.001863392995721e-07,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-recon,acc,0.057296204309021714,4.51472763278896e-12,4.51472763278896e-11,True,E
+"continued CropGlobe runs, best checkpoint",Estonia,MP-recon,f1,0.04388272895971227,5.181631204071459e-10,5.181631204071459e-09,True,E
+"all continued runs, best checkpoint","France, transductive",MP-PCA,acc,0.021669959023563713,0.07871312371528225,0.1574262474305645,False,S
+"all continued runs, best checkpoint","France, transductive",MP-PCA,f1,0.0614956567729439,0.020380611355544788,0.040761222711089576,True,S
+"all continued runs, best checkpoint","France, transductive",MP-kmeans,acc,0.0027414504737611643,0.42482485911246937,0.8496497182249387,False,N
+"all continued runs, best checkpoint","France, transductive",MP-kmeans,f1,0.03837053193472474,0.08528982260970416,0.17057964521940833,False,N
+"all continued runs, best checkpoint","France, transductive",MP-recon,acc,0.07794846250886267,0.000151896004103477,0.0003677223585204115,True,E
+"all continued runs, best checkpoint","France, transductive",MP-recon,f1,0.11063959169974114,0.0009631765407349717,0.0019263530814699434,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-PCA,acc,0.1153281782514183,9.786547867775251e-07,7.829238294220201e-06,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-PCA,f1,0.21783008272338708,5.269426087261327e-07,4.215540869809062e-06,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-kmeans,acc,0.10778036530406654,1.7244523264298182e-06,1.3795618611438546e-05,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-kmeans,f1,0.198378378103995,1.159995637047775e-06,9.2799650963822e-06,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-recon,acc,0.10320768623084664,3.419300634059817e-07,2.7354405072478535e-06,True,E
+"all continued runs, best checkpoint","Australia, transductive",MP-recon,f1,0.2030510523065432,1.6885979720516368e-07,1.3508783776413095e-06,True,E
+"all continued runs, best checkpoint","France, strict",MP-PCA,acc,0.0494706420869437,0.0011989010019433912,0.0071934060116603474,True,E
+"all continued runs, best checkpoint","France, strict",MP-PCA,f1,0.12013109985917265,1.1528350003560421e-05,6.917010002136252e-05,True,E
+"all continued runs, best checkpoint","France, strict",MP-kmeans,acc,0.03273666387351633,0.011019732420200498,0.066118394521203,False,S
+"all continued runs, best checkpoint","France, strict",MP-kmeans,f1,0.09992353367954404,4.8488270140142705e-05,0.00029092962084085626,True,S
+"all continued runs, best checkpoint","France, strict",MP-recon,acc,0.10959953913019449,1.8646220922200744e-06,1.678159882998067e-05,True,E
+"all continued runs, best checkpoint","France, strict",MP-recon,f1,0.17422115805456073,3.0382290276799887e-07,2.7344061249119896e-06,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-PCA,acc,0.09533101744340178,2.27560251576651e-05,0.0002048042264189859,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-PCA,f1,0.20065130248186694,1.1023605426438978e-06,9.921244883795081e-06,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-kmeans,acc,0.08399380838767834,6.016785772256041e-05,0.0005415107195030437,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-kmeans,f1,0.17569661485993898,3.3244305293699675e-06,2.9919874764329708e-05,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-recon,acc,0.07954160012724676,6.128705975340192e-05,0.0003677223585204115,True,E
+"all continued runs, best checkpoint","Australia, strict",MP-recon,f1,0.17929031637273596,1.3273234739757459e-06,7.963940843854476e-06,True,E
+"all continued runs, best checkpoint",Estonia,MP-PCA,acc,0.04236662668409981,7.495032195408728e-10,7.495032195408728e-09,True,E
+"all continued runs, best checkpoint",Estonia,MP-PCA,f1,0.031504853712279395,2.332163413991041e-08,2.332163413991041e-07,True,E
+"all continued runs, best checkpoint",Estonia,MP-kmeans,acc,0.03480083167528854,4.2764664418308175e-09,4.276466441830817e-08,True,E
+"all continued runs, best checkpoint",Estonia,MP-kmeans,f1,0.027662303718156915,7.236607294814737e-08,7.236607294814738e-07,True,E
+"all continued runs, best checkpoint",Estonia,MP-recon,acc,0.0572394559718038,3.975640651686175e-12,3.9756406516861744e-11,True,E
+"all continued runs, best checkpoint",Estonia,MP-recon,f1,0.04381945493725726,5.343169646870251e-10,5.343169646870252e-09,True,E
+"all continued runs, final-epoch checkpoint","France, transductive",MP-PCA,acc,0.02111746774832176,0.08389916073410017,0.16779832146820034,False,S
+"all continued runs, final-epoch checkpoint","France, transductive",MP-PCA,f1,0.06175750446716636,0.019661172094197425,0.03932234418839485,True,S
+"all continued runs, final-epoch checkpoint","France, transductive",MP-kmeans,acc,0.0021889591985192135,0.4399272282752944,0.8798544565505888,False,N
+"all continued runs, final-epoch checkpoint","France, transductive",MP-kmeans,f1,0.0386323796289472,0.08305674423739122,0.16611348847478244,False,N
+"all continued runs, final-epoch checkpoint","France, transductive",MP-recon,acc,0.07739597123362085,0.0001625832272993671,0.0003251664545987342,True,E
+"all continued runs, final-epoch checkpoint","France, transductive",MP-recon,f1,0.1109014393939638,0.0009183066760560835,0.001836613352112167,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-PCA,acc,0.11551904830072637,1.35063927751676e-06,1.080511422013408e-05,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-PCA,f1,0.21782370110784388,6.559640824273886e-07,5.2477126594191085e-06,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-kmeans,acc,0.10797123535337465,2.3702009109345525e-06,1.896160728747642e-05,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-kmeans,f1,0.19837199648845177,1.44030378902022e-06,1.152243031216176e-05,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-recon,acc,0.10339855628015493,5.665174268609078e-07,4.532139414887262e-06,True,E
+"all continued runs, final-epoch checkpoint","Australia, transductive",MP-recon,f1,0.20304467069100007,2.3795207501442864e-07,1.9036166001154291e-06,True,E
+"all continued runs, final-epoch checkpoint","France, strict",MP-PCA,acc,0.04915572206005577,0.0009851778001682431,0.005911066801009459,True,E
+"all continued runs, final-epoch checkpoint","France, strict",MP-PCA,f1,0.1213754768155801,6.849883269550066e-06,4.10992996173004e-05,True,E
+"all continued runs, final-epoch checkpoint","France, strict",MP-kmeans,acc,0.0324217438466284,0.009689378201716005,0.058136269210296035,False,S
+"all continued runs, final-epoch checkpoint","France, strict",MP-kmeans,f1,0.1011679106359515,2.902235423370287e-05,0.00017413412540221723,True,S
+"all continued runs, final-epoch checkpoint","France, strict",MP-recon,acc,0.10928461910330656,1.2935796478252032e-06,1.1642216830426828e-05,True,E
+"all continued runs, final-epoch checkpoint","France, strict",MP-recon,f1,0.1754655350109683,1.6123328742637323e-07,1.9036166001154291e-06,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-PCA,acc,0.09548477387201107,1.9707625286891502e-05,0.00017736862758202353,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-PCA,f1,0.20148214574569773,8.326682473011645e-07,7.49401422571048e-06,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-kmeans,acc,0.08414756481628763,5.2287853376232875e-05,0.00047059068038609583,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-kmeans,f1,0.1765274581237698,2.5126094028596117e-06,2.2613484625736505e-05,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-recon,acc,0.07969535655585602,5.1766844641279775e-05,0.0003106010678476786,True,E
+"all continued runs, final-epoch checkpoint","Australia, strict",MP-recon,f1,0.18012115963656672,9.251714695565528e-07,5.551028817339317e-06,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-PCA,acc,0.042463267011539976,7.723026879296384e-10,7.723026879296383e-09,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-PCA,f1,0.031649888535744644,2.1858967807598776e-08,2.1858967807598775e-07,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-kmeans,acc,0.034897472002728705,4.38652209495449e-09,4.38652209495449e-08,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-kmeans,f1,0.027807338541622168,6.749085966391571e-08,6.749085966391571e-07,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-recon,acc,0.057336096299243966,4.2574122914884616e-12,4.257412291488462e-11,True,E
+"all continued runs, final-epoch checkpoint",Estonia,MP-recon,f1,0.043964489760722515,5.017490330980556e-10,5.017490330980556e-09,True,E
