@@ -50,7 +50,8 @@ src/fsq_matched_controls/     the Python package
   training/                   training entry points and shared training helpers
   probe/                      the logistic probe
   stats/                      tests: one-sided t, Welch, Holm, interim-analysis multiplier
-  analysis/                   Table I, Table II, Figure 1, the decomposition and twin tables, the letter's printed values, the smoke test
+  controls/                   the two matched controls: rounded PCA and the k-means vocabulary, built from the datasets
+  analysis/                   Table I, Table II, Figure 1, the supplement's analyses, the checks, the letter's printed values, the smoke test
   paths.py                    every file location (see "Paths")
 configs/
   letter/                     the 80 runs of the letter (40 masked prediction, 40 reconstruction)
@@ -160,6 +161,72 @@ python -m fsq_matched_controls.analysis.check_end_to_end [--eurocropsml] [--run 
 
 **Platform.** Exact equality holds on the platform the letter's probes ran on (Windows, CPU, PyTorch 2.7.0); the check then prints "identical". On other platforms a few FSQ codes can flip at the quantizer's rounding boundaries, and the lbfgs fit can differ slightly with the BLAS library. The check then passes within a tolerance of 0.001 per metric (`PLATFORM_TOLERANCE` in the module) and prints the differences. Observed on Linux (CPU, same pins): for EuroCropsML masked prediction, seed 11, 3 of about 9.9 million token cells differed, accuracy by 8.5e-5 and macro-F1 by 5.8e-4. CropGlobe (strict Queensland, seed 11) gave identical scores, although a few of its token cells differed too.
 
+## Rebuild the controls and the supplement's analyses
+
+These need the datasets (see "Data"; `FSQ_DATA_ROOT`). The monthly band means are built once with the package's data modules and cached in `FSQ_FEATURES`. All run on CPU.
+
+```
+python -m fsq_matched_controls.controls                              # rounded PCA and the k-means vocabulary, every row, the letter's probe
+python -m fsq_matched_controls.analysis.check_controls               # the same, compared with the stored control scores and Table I's verdicts
+python -m fsq_matched_controls.analysis.probe_runs --sample | --all  # the letter's probe on the runs' tokens and continuous latent, compared with results/runs/
+python -m fsq_matched_controls.analysis.control_variants --compare   # S4.1, S5.2: continuous PCA, fit-pool standardization, spectral-index control
+python -m fsq_matched_controls.analysis.no_harmonization --compare   # S4.1: without label harmonization (after probe_runs --all)
+python -m fsq_matched_controls.analysis.per_run_readouts --mode curve|onehot|gb --sample --compare   # S6 rounding curve, S4.1 one-hot, S4.3 boosting
+python -m fsq_matched_controls.analysis.fewshot_estonia --compare    # S4.2: Estonian labels on the official few-shot split
+python -m fsq_matched_controls.analysis.gradient_boosting --compare  # S4.3: boosting on the raw band means (--kmeans: and the ten-band k-means)
+python -m fsq_matched_controls.analysis.bits_per_month --compare     # S3: entropy of the controls' month codes
+```
+
+From `results/` alone (no datasets):
+
+```
+python -m fsq_matched_controls.analysis.kmeans_fits --compare        # S3: the five k-means fits per row
+python -m fsq_matched_controls.analysis.signflip_tests --compare     # S4.1, S7: exact sign-flip test beside Table I's t-tests
+python -m fsq_matched_controls.analysis.continued_runs --compare     # S4.1: Table I and the decomposition with the continued runs
+python -m fsq_matched_controls.analysis.parameter_counts             # S2: parameters of the tokenizers (from the configurations and the model code)
+python -m fsq_matched_controls.analysis.training_times --compare     # S2: training wall-clock from the MLflow records
+```
+
+With `--compare`, these commands check their tables against the stored ones: byte-identical on the letter's platform (Windows); elsewhere identical apart from line endings, or equal to floating-point precision (the last one or two digits of some p-values; `analysis/compare_tables.py`). `parameter_counts` prints whether every count equals the stored one.
+
+**Run time and memory** (one CPU thread, measured on Linux):
+
+| Command | Time | Peak memory |
+|---|---|---|
+| `check_training --eurocropsml` | 2 min 47 s | 4.7 GB |
+| `check_end_to_end --eurocropsml` | 2 min 11 s | 4.3 GB |
+| `check_controls` | 13 min 51 s | 1.8 GB |
+| `probe_runs --sample` (8 runs) | 8 min | 4.6 GB |
+| `probe_runs --all` (80 runs) | 1 h 17 min | 4.4 GB |
+| `control_variants --compare` | 6 min 21 s | 1.5 GB |
+| `per_run_readouts --sample`, curve / onehot / gb | 1 min 21 s / 1 min 10 s / 2 min 38 s | 4.2 GB |
+| `fewshot_estonia --compare` | 5 min 41 s | 1.3 GB |
+| `gradient_boosting --compare` (`--kmeans`) | 6 min 51 s (41 min) | 0.9 GB (1.0 GB) |
+| `bits_per_month --compare` | 8 min 55 s | 1.7 GB |
+| `no_harmonization --compare` (after `probe_runs --all`) | 54 min | 1.4 GB |
+
+**Reproduction on another platform.** The letter's probes and controls ran on Windows (CPU, PyTorch 2.7.0, the pinned versions). Every check prints "identical" or the largest difference per metric, and compares every verdict. It passes only if every verdict is identical and every difference is within the tolerance of its analysis (`analysis/tolerances.py`). Observed on Linux with the same pinned versions:
+
+| Analysis | Tolerance | Observed on Linux | Cause |
+|---|---|---|---|
+| Probe scores of the runs (tokens, continuous) | 0.001 | up to 8.0e-4; 60 of the 200 scores identical | lbfgs stops at 300 iterations; a few FSQ codes flip at the rounding boundaries |
+| Macro-F1 in Estonia (run probes) | 0.002 | 1.12e-3 (one run: 6 of 8.6 million token cells of the probe pool flipped) | macro-F1 over many small classes, about 0.08 |
+| Rounded PCA | 0.001 | up to 2.4e-4; strict France accuracy identical | lbfgs |
+| k-means vocabulary, mean of five fits | 0.003 | up to 1.2e-3 (single fits up to 4.2e-3) | the vocabulary is fitted on principal-component scores, whose tiny float differences (BLAS) change the mini-batch path; k-means fitted on the band means directly is identical on Linux |
+| k-means vocabulary, entropy (bits per month), mean of five fits | 0.01 bits | 0.0077 bits (single fits up to 0.046) | as above |
+| Few-shot probe (S4.2), k-means columns / rounded-PCA columns | 0.005 / 0.002 | 4.6e-3 (k = 1, 123 training parcels) / 1.3e-3 | as above; lbfgs on small training sets |
+| Continuous PCA, fit-pool standardization | 0.001 | up to 3.8e-4 | lbfgs |
+| Spectral-index control, one-hot readout | 0.002 | 1.3e-3, 1.1e-3 | lbfgs far from convergence |
+| Rounding curve, grid distance | 0.001 | 1.2e-4, 5e-7 | lbfgs; float summation |
+| Gradient boosting on the tokens | none (cells listed) | seed 11 identical; seed 97 France macro-F1 1.2e-2 (2 of 10.2 million token cells flipped) | splits on exact token values |
+| Gradient boosting on the raw band means / ten-band k-means | 0.001 | identical to the Linux rebuild (`gradient_boosting_raw_linux.csv`); the Windows rebuild differs in the k-means rows by up to 1.3e-2 | the platform |
+| Rounded PCA and ten-band k-means, entropy (bits per month) | last stored digit | identical (one rounding tie at the fourth decimal) | – |
+| Smoke test: regenerated statistics tables (Table I's S7.1 records, Table II's step tests) | relative 1e-12 | 5.6e-16 (last one or two digits of some p-values); byte-identical on Windows | floating-point arithmetic of the platform |
+| Monthly band means, k-means fit statistics, parameter counts, training times | exact | identical (k-means fit statistics and training times: apart from line endings) | – |
+| Sign-flip tests, continued runs (tables from `results/`) | relative 1e-12 | 4.3e-16 | floating-point arithmetic of the platform |
+
+Table I's verdicts recomputed with the rebuilt controls equal the letter's.
+
 ## Run-name key
 
 The configuration file names and `experiment_name`s are kept as trained, because they key the per-run tables in `results/`.
@@ -194,11 +261,11 @@ This version contains:
 - the training code and every run configuration;
 - the tokenizer checkpoints;
 - the per-run results;
-- the analyses behind Table I, Table II and Figure 1.
+- the analyses behind Table I, Table II and Figure 1;
+- the two controls and the probe, rebuilt from the datasets and the checkpoints;
+- the supplement's analyses: S2 (parameters, training times), S3 (k-means fits, bits per month), S4 (sensitivity, Estonian few-shot, gradient boosting, continued runs), S5.2 (continuous PCA), S6 (rounding curve, grid distance), S7 (sign-flip tests).
 
-The following analyses are available as per-run results in `results/`; their code modules will be added:
-- the probe and control code that rebuilds the monthly arrays from the datasets and the checkpoints;
-- the supplement's sensitivity analyses (S4), the gradient-boosting probe (S4.3), the bits per month (S3), the rounding grid (S6), and the continued-run tables (S8).
+Kept as stored results, without a regenerating module: the rows of earlier diagnostics that feed these tables (`results/runs/diagnostic*`), the stop epochs and validation losses read from the training records (`results/supplement_S5_runs/`), the per-class F1 in France, and the capped runs of S8 (`results/supplement_S8_training/capped_runs_*`).
 
 ## How to cite
 
