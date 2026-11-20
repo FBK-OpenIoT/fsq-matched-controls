@@ -2,19 +2,18 @@
 
 ## Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series
 
-This material supports the letter's claims; it is not needed to follow them. Citations ([7], [11]) use the letter's reference list. The extended supplement (in the repository, with the code and per-run result tables, https://github.com/FBK-OpenIoT/fsq-matched-controls) holds every check in full, including those only summarized here. Accuracy / macro-F1 throughout; logistic probe, harmonized labels, ten runs per objective and setting.
+This material supports the letter's claims; it is not needed to follow them. Citations ([7], [11]) use the letter's reference list. Accuracy / macro-F1 throughout; logistic probe, harmonized labels, ten runs per objective and setting.
 
 ## S1. Data and preprocessing
 
-**CropGlobe [7]:** Sentinel-2 pixel samples per country split (the Australian split covers Queensland only), fixed 5-day composites with 34 % to 67 % of bins interpolated in the product, and seven season-aligned month-tokens (May–November) of 6 grid values. **EuroCropsML [11]:** Sentinel-2 parcels per NUTS3 region with real, irregular acquisition dates, and nine month-tokens (March–November) of up to 10 real observations, valid with at least 2 and never imputed. Both use the same ten bands. In Estonia 11.9 % of parcel-months are missing; each keeps its calendar slot and reaches the probe as a constant placeholder, the same for every parcel and representation. Coverage, window and band details: extended supplement, §S1.
+**CropGlobe [7]:** Sentinel-2 pixel samples per country split (the Australian split covers Queensland only), fixed 5-day composites with 34 % to 67 % of bins interpolated in the product, and seven season-aligned month-tokens (May–November) of 6 grid values. **EuroCropsML [11]:** Sentinel-2 parcels per NUTS3 region with real, irregular acquisition dates, and nine month-tokens (March–November) of up to 10 real observations, valid with at least 2 and never imputed. Both use the same ten bands. In Estonia 11.9 % of parcel-months are missing; each keeps its calendar slot and reaches the probe as a constant placeholder, the same for every parcel and representation.
 
 ## S2. Encoder and training
 
-**Encoder.** Temporal CNN (channels 32/64/128, kernel 3, pooling, linear to d = 4, tanh) followed by FSQ at five levels. On EuroCropsML it is adapted to the observation mask (extended supplement, §S2.1). The masked-prediction tokenizer is trained end to end with a joint softmax over the 625 codes and no anti-collapse term; the transformer is discarded after training, and every probe reads the encoder's output.
+**Encoder.** Temporal CNN (channels 32/64/128, kernel 3, pooling, linear to d = 4, tanh) followed by FSQ at five levels. On EuroCropsML it is adapted to the observation mask. The masked-prediction tokenizer is trained end to end with a joint softmax over the 625 codes and no anti-collapse term; the transformer is discarded after training, and every probe reads the encoder's output.
 
-**Recipe.** AdamW (weight decay 1e-4), learning rate halved after 10 epochs without validation improvement, early stopping on validation loss. Reconstruction is trained on masked prediction's schedule and number of steps per epoch. Learning rates, batches, epoch caps, validation splits, seeds, hardware and software are tabulated in the extended supplement (§S3.1–S3.1b).
-
-**Reconstruction on its own recipe.** On CropGlobe, reconstruction was also trained three times (transductive) on its own recipe (cosine schedule, batches of 512 windows): it stays below both controls in France (0.609 to 0.628 in accuracy) and lies above k-means in Queensland (0.569 to 0.584 against 0.566; three runs, not tested). Per seed, and the matched recipe's effect (France +0.002 to +0.008, Queensland −0.016 to −0.026): extended supplement, §S9.2.
+**Recipe.** AdamW (weight decay 1e-4), learning rate halved after 10 epochs without validation improvement, early stopping on validation loss. Reconstruction is trained on masked prediction's schedule and number of steps per epoch.
+**Reconstruction on its own recipe.** On CropGlobe, reconstruction was also trained three times (transductive) on its own recipe (cosine schedule, batches of 512 windows): it stays below both controls in France (0.609 to 0.628 in accuracy) and lies above k-means in Queensland (0.569 to 0.584 against 0.566; three runs, not tested). The matched recipe changes France by +0.002 to +0.008 and Queensland by −0.016 to −0.026.
 
 **Code use and collapse.** Every CropGlobe masked-prediction run uses all 625 codes. One EuroCropsML run (seed 23) collapsed early onto 308 codes; it is kept in every table and test.
 
@@ -24,9 +23,9 @@ This material supports the letter's claims; it is not needed to follow them. Cit
 
 **Rounded PCA** uses scikit-learn PCA with four components (random state 1904), fitted on the fit pool; each component is standardized on the probe's training and evaluation samples together (on EuroCropsML, on the training samples only), clipped at ±2 standard deviations and rounded onto the five-level grid. On EuroCropsML only valid months enter the fits, and a missing month is zero.
 
-**The k-means vocabulary** is scikit-learn mini-batch k-means with 625 centroids (settings: extended supplement, §S4.1) on the four principal-component scores, standardized on the fit pool; each month is represented by the coordinates of its centroid. It is fitted five times per row with seeds 1904, 42, 101, 2024 and 4242, and the letter uses the mean of the five fits. The fit-to-fit standard deviation is 0.0006 to 0.0016 in accuracy and 0.0010 to 0.0026 in macro-F1.
+**The k-means vocabulary** is scikit-learn mini-batch k-means with 625 centroids on the four principal-component scores, standardized on the fit pool; each month is represented by the coordinates of its centroid. It is fitted five times per row with seeds 1904, 42, 101, 2024 and 4242, and the letter uses the mean of the five fits. The fit-to-fit standard deviation is 0.0006 to 0.0016 in accuracy and 0.0010 to 0.0026 in macro-F1.
 
-**Code usage.** Bits per month are the entropy of the empirical distribution of the joint month code on the evaluation region (ceiling log2 625 = 9.29). Rounded PCA uses 5.8 to 6.4 bits, the masked-prediction tokens (mean of the ten runs) 7.8 to 8.5 and k-means (mean of the five fits) 8.3 to 8.8; single masked-prediction runs reach up to 8.78, so k-means uses more bits than the tokens' mean, not than every run (per row and per run: extended supplement, §S4.2).
+**Code usage.** Bits per month are the entropy of the empirical distribution of the joint month code on the evaluation region (ceiling log2 625 = 9.29). Rounded PCA uses 5.8 to 6.4 bits, the masked-prediction tokens (mean of the ten runs) 7.8 to 8.5 and k-means (mean of the five fits) 8.3 to 8.8; single masked-prediction runs reach up to 8.78, so k-means uses more bits than the tokens' mean, not than every run.
 
 ## S4. Sensitivity of the outcomes
 
@@ -39,7 +38,7 @@ Table I's outcomes (established = both metrics bold in Table I; here E = both me
 | Equal-mass grid (20/40/60/80 percentiles) for rounded PCA | Masked prediction against it is not established in France in either setting (accuracy test; margins −0.009 and +0.021); Queensland and Estonia stay established |
 | Rounded PCA standardized on the encoder's fit pool | Strict Queensland, reconstruction − rounded PCA: E → N |
 | Both controls on the month's full window of values | France transductive, masked prediction − rounded PCA S → E, − k-means N → E (both controls weaker); reconstruction lies above the window form of rounded PCA in every CropGlobe row |
-| k-means on the ten band means, read as ten values (not dimensionality-matched) | Masked prediction − k-means: strict France and strict Queensland E → S. (scores: extended supplement, §S4.4) |
+| k-means on the ten band means, read as ten values (not dimensionality-matched) | Masked prediction − k-means: strict France and strict Queensland E → S |
 | One-hot code readout, for tokens and controls alike (raises every score) | Masked prediction − k-means: strict France E → S; − rounded PCA: strict France E → S. The Queensland margins over k-means fall to 0.03–0.04 in accuracy |
 | Gaussian mixture or BIRCH (625 components) instead of k-means | Gaussian mixture: none. BIRCH: France transductive N → S |
 | Spectral-index control (NDVI, NDRE, NDMI, SWIR ratio; rounded like rounded PCA) | New control: masked prediction E in every row, reconstruction N in every row |
@@ -61,12 +60,11 @@ EuroCropsML's official few-shot split (k parcels per class, one draw per k, 124 
 | 100 | 0.331 / 0.103 | 0.220 / 0.062 | 0.234 / 0.068 | 0.273 / 0.075 | 0.366 / 0.102 |
 | 500 | 0.481 / 0.117 | 0.337 / 0.065 | 0.370 / 0.078 | 0.394 / 0.079 | 0.545 / 0.136 |
 
-At every k of the official split (1, 5, 10, 20, 100, 200, 500; k = 5 and 200 are in the extended supplement), **masked prediction** beats both controls (E, ten of ten runs, t-test and sign-flip; p × 2, Holm over the seven k), **reconstruction** is N against both, and **raw bands** are behind masked prediction up to k = 20 and ahead in accuracy from k = 100.
+At every k of the official split (1, 5, 10, 20, 100, 200, 500; the table shows five of the seven k), **masked prediction** beats both controls (E, ten of ten runs, t-test and sign-flip; p × 2, Holm over the seven k), **reconstruction** is N against both, and **raw bands** are behind masked prediction up to k = 20 and ahead in accuracy from k = 100.
 
 ### S4.3 A gradient-boosting probe
 
-A partial check, not tested: gradient boosting replaces the logistic probe for masked prediction only, on the ten transductive runs, against rounded PCA and the ten-band k-means vocabulary. In accuracy the tokens' mean is below both controls and raw bands in France (0.748 against 0.757, 0.763 and 0.804) and level with k-means in Queensland (0.725 against 0.721; rounded PCA 0.679, raw bands 0.754). Macro-F1, per run and the two strict runs per region: extended supplement, §S9.3.
-
+A partial check, not tested: gradient boosting replaces the logistic probe for masked prediction only, on the ten transductive runs, against rounded PCA and the ten-band k-means vocabulary. In accuracy the tokens' mean is below both controls and raw bands in France (0.748 against 0.757, 0.763 and 0.804) and level with k-means in Queensland (0.725 against 0.721; rounded PCA 0.679, raw bands 0.754).
 ## S5. Run-to-run spread and the decomposition
 
 ### S5.1 The low French runs
@@ -146,11 +144,11 @@ Per objective at d = 4, **(c)** the FSQ tokens are set against **(a)** the conti
 
 **The twin matters.** Against both twins the tokens are ahead in Queensland. In strict France they are level against the slow-teacher twin and ahead of the band-value twin; in Estonia they are behind the slow-teacher twin and level with the band-value twin.
 
-**Training budget.** Both sides started with the same cap and patience (CropGlobe 100 epochs and 15, EuroCropsML 200 and 25); the capped runs were then continued, the twin tables show the continued runs, and no outcome changed (run counts, final-checkpoint values and the margins with both sides continued: extended supplement, §S5.4).
+**Training budget.** Both sides started with the same cap and patience (CropGlobe 100 epochs and 15, EuroCropsML 200 and 25); the capped runs were then continued, the twin tables show the continued runs, and no outcome changed.
 
 ## S6. Rounding curve and grid distance
 
-**Five levels are enough for post-hoc rounding.** With the trained continuous latents rounded post hoc at 3 to 17 levels (table: extended supplement), going from 5 to 17 levels gains at most 0.014 in accuracy and 0.017 in macro-F1.
+**Five levels are enough for post-hoc rounding.** With the trained continuous latents rounded post hoc at 3 to 17 levels, going from 5 to 17 levels gains at most 0.014 in accuracy and 0.017 in macro-F1.
 
 **Grid distance.** The mean distance of the latent values to the nearest grid point, in level spacings, has a uniform-spread reference of 0.25. It is 0.264 (CropGlobe) and 0.257 (EuroCropsML) for **reconstruction** and 0.200 and 0.217 for **masked prediction**. Rounding therefore does real work. Being closer to the grid does not consistently lower the rounding cost.
 
@@ -164,4 +162,4 @@ Per objective at d = 4, **(c)** the FSQ tokens are set against **(a)** the conti
 
 ## S8. Choices made after the first results
 
-Decided or defined after the first results, each in full in the extended supplement (§S8): the per-region reading of the reconstruction rule and the masked-prediction-against-reconstruction rule; the extension to ten runs (S7); dropping the grid-resolution claim, whose rule fired on a spread three times the one assumed; the multiplicity correction and the tests against k-means and of reconstruction against the controls; the dimensionality-matched k-means form (S4); one run cancelled by hand (EuroCropsML; at most 0.0005 on its probe; extended supplement §S8); the discretization comparison (S5.3); and continuing the capped runs (S4). The plan was kept in working files and first committed to version control after the first results. Its earlier history is the authors' own record.
+Decided or defined after the first results: the per-region reading of the reconstruction rule and the masked-prediction-against-reconstruction rule; the extension to ten runs (S7); dropping the grid-resolution claim, whose rule fired on a spread three times the one assumed; the multiplicity correction and the tests against k-means and of reconstruction against the controls; the dimensionality-matched k-means form (S4); one run cancelled by hand (EuroCropsML; at most 0.0005 on its probe); the discretization comparison (S5.3); and continuing the capped runs (S4). The plan was kept in working files and first committed to version control after the first results. Its earlier history is the authors' own record.
