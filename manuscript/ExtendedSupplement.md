@@ -1,6 +1,6 @@
 # Extended Supplementary Material
 
-## Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series
+## Masked Prediction Over Reconstruction: Learned Sentinel-2 Tokenizers Against Matched Discrete Codes
 
 This is the full report behind the letter's 2–3-page supplementary material, released with the code
 and the per-run result tables (repository, https://github.com/FBK-OpenIoT/fsq-matched-controls). Its section numbers are its own; the

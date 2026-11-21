@@ -23,7 +23,7 @@ repository-code: "https://github.com/FBK-OpenIoT/fsq-matched-controls"
 license: MIT
 preferred-citation:
   type: article
-  title: "Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series"
+  title: "Masked Prediction Over Reconstruction: Learned Sentinel-2 Tokenizers Against Matched Discrete Codes"
   authors:
     - given-names: "João"
       family-names: "Calisto"

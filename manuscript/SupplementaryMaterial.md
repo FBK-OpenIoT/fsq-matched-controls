@@ -1,6 +1,6 @@
 # Supplementary Material
 
-## Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series
+## Masked Prediction Over Reconstruction: Learned Sentinel-2 Tokenizers Against Matched Discrete Codes
 
 This material supports the letter's claims; it is not needed to follow them. Citations ([7], [11]) use the letter's reference list. Accuracy / macro-F1 throughout; logistic probe, harmonized labels, ten runs per objective and setting.
 

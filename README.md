@@ -1,4 +1,4 @@
-# Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series
+# Masked Prediction Over Reconstruction: Learned Sentinel-2 Tokenizers Against Matched Discrete Codes
 
 Code, run configurations, tokenizer checkpoints and per-run results of the letter of the same title, submitted to IEEE Geoscience and Remote Sensing Letters.
 
@@ -274,7 +274,7 @@ Kept as stored results, without a regenerating module: the rows of earlier diagn
 
 Please cite the letter this code accompanies:
 
-> J. Calisto, M. Vecchio, M. Pincheira, and F. Antonelli, "Learned Discrete Tokenizers Against Matched Non-Learned Controls for Satellite Image Time Series," submitted to *IEEE Geoscience and Remote Sensing Letters*, 2026.
+> J. Calisto, M. Vecchio, M. Pincheira, and F. Antonelli, "Masked Prediction Over Reconstruction: Learned Sentinel-2 Tokenizers Against Matched Discrete Codes," submitted to *IEEE Geoscience and Remote Sensing Letters*, 2026.
 
 `CITATION.cff` holds the same reference in machine-readable form; GitHub shows it as "Cite this repository".
 
