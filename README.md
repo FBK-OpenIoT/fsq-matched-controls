@@ -2,7 +2,7 @@
 
 Code, run configurations, tokenizer checkpoints and per-run results of the letter of the same title, submitted to IEEE Geoscience and Remote Sensing Letters.
 
-The letter's supplementary material is `manuscript/SupplementaryMaterial.pdf`. `manuscript/ExtendedSupplement.md` reports every check in full, including those the three-page supplement summarizes or leaves out for space.
+The letter's supplementary material is `manuscript/SupplementaryMaterial.pdf`. `manuscript/ExtendedSupplement.md` is an archival record of every check run for the letter, with complete tables and logs.
 
 **What the letter does.** It evaluates a finite scalar quantization (FSQ) tokenizer that encodes each month of a Sentinel-2 series into one of 625 codes. The tokenizer is trained without labels, by reconstruction or by masked prediction. It is compared with two non-learned controls fitted on the same data and matched in dimensionality and vocabulary:
 - rounded principal components of the monthly band means;

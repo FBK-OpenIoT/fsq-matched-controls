@@ -198,8 +198,8 @@ def _load_npz_list(
         the full ``setup()`` load cost otherwise, since this loop is what
         populates the Dataset, not the DataLoader/Trainer).
     log_every   : Log progress every N files — this loop is single-threaded
-        and each ``np.load()`` can be slow on a OneDrive "Files On-Demand"
-        folder (cloud-only files must be fetched first), so silent progress
+        and each ``np.load()`` can be slow on a synced or cloud-backed
+        folder (files are fetched on demand), so silent progress
         here is easy to mistake for a hang.
     """
     if max_parcels is not None:
@@ -249,7 +249,7 @@ def _load_npz_list_cached(
     """Like ``_load_npz_list``, but backed by a one-time consolidated cache.
 
     First call for a given ``cache_path``: reads every listed npz file (slow --
-    ~200ms/file observed on this OneDrive setup for cold files, no way around
+    ~200ms/file observed on cloud-backed folders for cold files, no way around
     touching each one at least once) and writes ONE consolidated ``.npz`` with
     the raw (un-normalised, un-label-encoded) arrays.
 
